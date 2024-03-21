@@ -1,102 +1,135 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# On a +ve Note
 
-Welcome,
+![Responsive Image]()
 
-This is the Code Institute student template for React apps on the Codeanywhere IDE. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.  
-DO NOT use this template if you are using the Gitpod IDE. Use the following command instead:  
-`npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm`
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **31st August, 2023**
+Live Website can be viewed [here]() <br>
+You can check out my Repository [here]()
 
-## Codeanywhere Reminders
+## Table of contents
+ 1. [ UX ](#ux)
+	- [Site Goal](#site-goal)
+	- [User Stories](#user-stories)
+	- [Design](#design)
+	- [Wireframe](#wireframe)
+ 2. [ Features ](#features)
+ 3. [ Future Feature ](#future-features)
+ 4. [ Technology used ](#technologies-used)
+ 5. [ Testing ](#testing)
+	 - [Manual Testing](#manual-testing)
+	 - [Validations](#validations)
+ 6. [ Bugs ](#bugs)
+ 7. [ Deployment](#deployment)
+ 8. [ Citation of Sources](#credits)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## UX
+### Site Goal
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories
+#### As a User:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### As the site administrator:
 
----
 
-Happy coding!
+### Design
+ - Colours:
+	- **Text**: 
+	- **Body Background**: 
+	
+- Typography:
+	-  Imported **Protest Revolution** from Google font used as the primary font, and **Sans-Serif** used as the secondary font.
 
-# Getting Started with Create React App
+### Wireframe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Wireframe]()
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm install`
+ - Header
+	 
+ - Main
+		 
+ - Footer
 
-Installs the required npm packages.
+   
 
-### `npm start`
+## Future-Features
 
-Runs the app in the development mode.\
-Open port 3000 to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+We have used the following technologies to build our website.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 1. **HTML** Used to structure my website
+ 2. **CSS** Used to style the content of my website to make it more appealing and user-friendly.
+ 3. **Javascript** Used to provide functionality to make my website interactive.
+ 4. **GitHub** Used to store my Project and later to deploy the same.
+ 5. **GitPod** Used as an Integrated Development Environment for building this website.
+ 6. **Git** Used to version control throughout my project and to ensure that a clean record is maintained.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing
+### Manual Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Form Validation tests were carried out as below.**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ **Page is responsive**
+|Input | Status |
+|--|--|
+| Page is responsive to the device the user views the website | True |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+![Responsive in smaller screen]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Responsive in larger screen]()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Validations
 
-### Code Splitting
+**HTML Validation** -W3C Validation 
+- No error found
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![W3C Validator Image]()
 
-### Analyzing the Bundle Size
+**CSS Validation** - using Jigsaw Validator 
+- No error found
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Jigsaw Validator Image]()
 
-### Making a Progressive Web App
+**Javascript Validation** - using JSHint Validator 
+- No error or warnings found
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![JSHint Validator Image]()
 
-### Advanced Configuration
+### Google Lighthouse Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Google Lighthouse Image]()
 
-### Deployment
+## Bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Solved Bugs
 
-### `npm run build` fails to minify
+### unfixed Bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- no unfixed Bugs
+
+## Deployment
+ 
+Live link of the website - 
+
+## Credits
+### Content and resources
+
+### Acknowledgements
+
+
+*****************
+
+[Back to top](#table-of-content) 
