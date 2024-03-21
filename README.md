@@ -60,7 +60,7 @@ You can check out my Repository [here]()
 
 ## Technologies Used
 
-I have used the following technologies to build my website.
+We have used the following technologies to build our website.
 
  1. **HTML** Used to structure my website
  2. **CSS** Used to style the content of my website to make it more appealing and user-friendly.
@@ -87,7 +87,6 @@ I have used the following technologies to build my website.
 
 <br>
 
-
 ![Responsive in smaller screen]()
 
 ![Responsive in larger screen]()
@@ -102,12 +101,10 @@ I have used the following technologies to build my website.
 **CSS Validation** - using Jigsaw Validator 
 - No error found
 
-
 ![Jigsaw Validator Image]()
 
 **Javascript Validation** - using JSHint Validator 
 - No error or warnings found
-
 
 ![JSHint Validator Image]()
 
@@ -115,17 +112,13 @@ I have used the following technologies to build my website.
 
 ![Google Lighthouse Image]()
 
-
-
 ## Bugs
 
 ### Solved Bugs
 
-
 ### unfixed Bugs
 
 - no unfixed Bugs
-
 
 ## Deployment
  
@@ -133,7 +126,6 @@ Live link of the website -
 
 ## Credits
 ### Content and resources
-
 
 ### Acknowledgements
 
