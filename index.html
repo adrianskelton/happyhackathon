@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Favicon-->
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <!-- CSS style sheet -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- Title -->
     <title>On a +ve note</title>
 </head>
@@ -19,15 +27,21 @@
     <header>
         <!--Header Container-->
         <div class="container-fluid">
-            <div class="row">
+            <div class="row header-container">
                 <!--Logo container-->
-                <div class="col-6" id="h1-container">
+                <div class="col-3">
                     <a href="index.html">
-                        <img src=# alt="On a +ve note logo" id="logo">
+                        <img src="assets/images/logo-main.PNG" alt="On a +ve note logo" id="logo">
                     </a>
                 </div>
+
+                <!--Header-->
+                <div class="col-6 h1-container">
+                    <h1>#Affirmation Generator#</h1>
+                </div>
+
                 <!--Navigation items container-->
-                <div class="col-6" id="nav-container">
+                <div class="col-3" id="nav-menu">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
                             <!-- Toggler button for mobile devices -->
@@ -42,13 +56,10 @@
                                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">#</a>
+                                        <a class="nav-link" href="#">Log in</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">#</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">#</a>
+                                        <a class="nav-link" href="#">Sign up</a>
                                     </li>
                                 </ul>
                             </div>
@@ -65,40 +76,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="#" alt="#">
-                        <!--Cover text-->
-                        <div>
-                            <h2>Placeholder text</h2>
-                        </div>
+                        <img class="d-block w-100" src="assets/images/scenery-2.jpg" alt="#">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="#" alt="#">
-                        <!--Cover text-->
-                        <div>
-                            <h2>Eplaceholder text</h2>
-                        </div>
+                        <img class="d-block w-100" src="assets/images/scenery-1.jpg" alt="#">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="#"
-                            alt="Third slide showing the picture of a crow flying in a white background">
-                        <!--Cover text-->
-                        <div>
-                            <h2>placeholder text</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="#" alt="#">
-                        <!--Cover text-->
-                        <div>
-                            <h2>Placeholder text</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="#" alt="#">
-                        <!--Cover text-->
-                        <div>
-                            <h2>Placeholder text</h2>
-                        </div>
+                        <img class="d-block w-100" src="assets/images/scenery-3.jpg" alt="#">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -111,10 +95,80 @@
                 </a>
             </div>
         </div>
+        <div>
+            <div class="row container-fluid text-center" id="affirmation-containwer">
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary"> Category 1 </button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary"> Category 2 </button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary"> Category 3 </button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary"> Category 4 </button>
+                </div>
+            </div>
+            <div id="affirmation-containwer">
+
+            </div>
+
+        </div>
+
 
     </section>
+    <!--Footer Container-->
+    <footer class="opaque-overlay">
+        <div class="container-fluid">
+            <div class="row footer-container">
+                <!--Paragraph container-->
+                <div id="paragraph-container" class="col-6">
+                    <p id="footer-p">
+                        © 2024 (Hack-Team-1)
+                    </p>
+                </div>
+                <!--Social media links container-->
+                <div class="col-6" id="socialmedia-container">
+                    <ul class="list-inline social-media">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.twitter.com/">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.youtube.com/">
+                                <i class="fa fa-youtube" aria-hidden="true"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript to enable toggler button -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
