@@ -2,9 +2,16 @@
 
 ![Responsive Image]()
 
+At "On a + Note," users can start their day on a positive note by accessing a curated selection of affirmations designed to promote optimism, resilience, and self-belief. Whether you seek motivation, encouragement, or simply a moment of reflection, our platform delivers affirmations that resonate with various aspects of life – from personal growth to professional success.
+
+But "On a + Note" goes beyond mere inspiration. With features designed to enhance user experience, our platform allows individuals to favorite their most cherished affirmations, creating a personalized collection of positive reminders. Through this feature, users can easily revisit and draw strength from their favorite affirmations whenever needed, fostering a continuous cycle of positivity.
+
+Moreover, "On a + Note" fosters a sense of community among its users. Through interactive features such as discussion forums and shared experiences, individuals can connect with like-minded individuals, share their journey towards positivity, and offer support and encouragement to others on a similar path.
+
+With its user-friendly interface, dynamic content, and emphasis on community engagement, "On a + Note" stands as a digital sanctuary for those seeking to cultivate a more optimistic outlook on life. Join us today and embark on a journey towards greater positivity, one affirmation at a time.
 
 Live Website can be viewed [here]() <br>
-You can check out my Repository [here]()
+You can check out my Repository [here](https://github.com/adrianskelton/happyhackathon)
 
 ## Table of contents
  1. [ UX ](#ux)
