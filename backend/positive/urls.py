@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from affirmation.views import home
+from backend.affirmation.views import home
+from django.conf import settings
+from django.urls import path, include
 
-from accounts.views import (
+from backend.accounts.views import (
     login_view, 
     logout_view,
     register_view,
