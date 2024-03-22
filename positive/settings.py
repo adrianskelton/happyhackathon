@@ -24,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$pv=uurdvq76ixbvv38_0d0b@+qnqh($@_j&l)8^=3(wk#dixm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost', '8000-adrianskelt-happyhackat-rzsjp8tua6v.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io', '127.0.0.1', '0.0.0.0', 'localhost', '8000-adrianskelt-happyhackat-rzsjp8tua6v.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io, *.ws-eu110.gitpod.io']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.ws-eu110.gitpod.io','https://*.ws-eu110.gitpod.io', 'http://*.ws-eu110.gitpod.io','http://*.ws-eu110.gitpod.io']
+
 
 
 # Application definition
