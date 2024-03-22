@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.signals import post_save
-from affirmations.models import Affirmation
+from affirmation.models import Affirmation
 
 
 class Profile(models.Model):
@@ -20,7 +20,7 @@ class Profile(models.Model):
     ]
     emotion_emoji = models.CharField(max_length=255, choices=EMOTION_CHOICES, blank=True, null=True)
 
-    class Meta:
+    class Meta: 
         ordering = ['-created_at']
 
     def __str__(self):
