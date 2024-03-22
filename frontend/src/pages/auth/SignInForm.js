@@ -40,6 +40,7 @@ function SignInForm() {
             [event.target.name]: event.target.value,
         });
     };
+
     return (
         <Row className={styles.Row}>
             <Col className="m-auto py-2 p-md-1" md={7}>
@@ -47,6 +48,7 @@ function SignInForm() {
                 <p className="text-center">Share your ideas, connect with others!</p>
                 <Container className={`${appStyles.Content} p-4 `}>
                     <h1 className={styles.Header}>login</h1>
+
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
                             <Form.Label className="d-none">Username</Form.Label>
@@ -80,6 +82,7 @@ function SignInForm() {
                             type="submit">
                             Login
                         </Button>
+
                         {errors.non_field_errors?.map((message, idx) => (
                             <Alert key={idx} variant="warning" className="mt-3">
                                 {message}
@@ -87,7 +90,6 @@ function SignInForm() {
                         ))}
 
                     </Form>
-
                 </Container>
                 <Container className={`mt-3 ${appStyles.Content}`}>
                     <Link className={styles.Link} to="/signup">
@@ -98,4 +100,5 @@ function SignInForm() {
         </Row>
     );
 }
+
 export default SignInForm;
