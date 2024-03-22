@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'affirmation',
     'profiles',
     'accounts',
+    'jazzmin',
 ]
 
 MIDDLEWARE = [
