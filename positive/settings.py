@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$pv=uurdvq76ixbvv38_0d0b@+qnqh($@_j&l)8^=3(wk#dixm'
+#SECRET_KEY = 'django-insecure-$pv=uurdvq76ixbvv38_0d0b@+qnqh($@_j&l)8^=3(wk#dixm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,19 +87,21 @@ WSGI_APPLICATION = 'positive.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zirpwyzo',                              
-        'USER': 'zirpwyzo',                             
-        'PASSWORD': 'TtcJ29g3Cqad2Larok9Yb85EVlrOLCM9',  
-        'HOST': 'snuffleupagus.db.elephantsql.com',      
-        'PORT': '5432',                                  
-    }
-}
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'zirpwyzo',                              
+#        'USER': 'zirpwyzo',                             
+#        'PASSWORD': 'TtcJ29g3Cqad2Larok9Yb85EVlrOLCM9',  
+#        'HOST': 'snuffleupagus.db.elephantsql.com',      
+#        'PORT': '5432',                                  
+#    }
+#}
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
