@@ -22,7 +22,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 DEBUG = True
 
 #ALLOWED_HOSTS = ['8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io', '127.0.0.1', '0.0.0.0', 'localhost', '8000-adrianskelt-happyhackat-rzsjp8tua6v.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io, *.ws-eu110.gitpod.io']
-ALLOWED_HOSTS = ['localhost', '8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'positive-note-ec9b8f1f6fb7.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'positive-note-ec9b8f1f6fb7.herokuapp.com', '8000-adamolnar-happyhackatho-rytviz7s9ne.ws-eu110.gitpod.io']
 CSRF_TRUSTED_ORIGINS = ['https://*.ws-eu110.gitpod.io','https://*.ws-eu110.gitpod.io', 'http://*.ws-eu110.gitpod.io','http://*.ws-eu110.gitpod.io', 'https://3001-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'https://3002-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',]
 
 CORS_ORIGIN_ALLOW_ALL = True 
@@ -40,19 +40,29 @@ CORS_ALLOWED_ORIGINS = [
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'affirmation',
     'profiles',
     'accounts',
     'corsheaders',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -61,6 +71,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware', #added this
