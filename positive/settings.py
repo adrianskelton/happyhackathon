@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import dj_database_url
 import cloudinary
 import cloudinary_storage
 if os.path.isfile("env.py"):
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware', #added this
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Added WhiteNoise middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
@@ -149,9 +151,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dmtdimx2z',
