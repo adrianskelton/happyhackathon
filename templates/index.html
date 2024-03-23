@@ -1,8 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - on a + note{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mt-5">On a + Note</h1>
-    <p>react?</p>
+<div class="hero-container content-container">
+    <div class="hero-image">
+        <!-- Your hero image goes here -->
+    </div>
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Your logo and name goes here -->
+                    <img src="{% static 'images/logo.png' %}" alt="logo">
+                    <h1 class="hero-title">Your Project Name</h1>
+                    <p class="hero-tagline">Your project tagline goes here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit ut mauris fermentum, id tempus lectus vestibulum. Donec nec magna id justo laoreet feugiat. Vivamus commodo diam quis metus vehicula, nec finibus quam posuere. Aenean consectetur fringilla nulla a vehicula. Phasellus a magna nec dui tempus volutpat.</p>
+            <a href="placeholder" class="btn btn-primary">Affirmations</a>
+            <!-- Placeholder link for now -->
+            <!-- <a href="#" class="btn btn-primary">Affirmations</a> -->
+        </div>
+    </div>
 </div>
 {% endblock %}
