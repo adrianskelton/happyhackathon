@@ -16,9 +16,14 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io', '127.0.0.1', '0.0.0.0', 'localhost', '8000-adrianskelt-happyhackat-rzsjp8tua6v.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io, *.ws-eu110.gitpod.io']
 ALLOWED_HOSTS = ['localhost', '8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'positive-note-ec9b8f1f6fb7.herokuapp.com']
-CSRF_TRUSTED_ORIGINS = ['https://*.ws-eu110.gitpod.io','https://*.ws-eu110.gitpod.io', 'http://*.ws-eu110.gitpod.io','http://*.ws-eu110.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://*.ws-eu110.gitpod.io','https://*.ws-eu110.gitpod.io', 'http://*.ws-eu110.gitpod.io','http://*.ws-eu110.gitpod.io', 'https://3001-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'https://3002-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',]
 
+CORS_ORIGIN_ALLOW_ALL = True 
 
+CORS_ALLOWED_ORIGINS = [
+    'https://3001-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',
+    'https://3002-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',
+]
 
 # Application definition
 
@@ -32,9 +37,11 @@ INSTALLED_APPS = [
     'affirmation',
     'profiles',
     'accounts',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -42,6 +49,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware', #added this
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'positive.urls'
