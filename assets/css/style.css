@@ -1,29 +1,42 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Happy+Monkey&family=Protest+Revolution&display=swap')
-
 /* CSS */
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Happy Monkey', cursive;
     font-weight: 600;
-} 
+}
 
 /* Body */
 body {
-    background: linear-gradient(135deg, rgb(247, 191, 219), #FFFFE0, #fff);
+    background-image: url(../images/background-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'bad Script', cursive;
-    font-size: 16px;
+    color: #FFFFFF;
+    font-size: 20px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 
 /* Header */
 header {
-    padding: 10px;
+    background-image: url(../images/background-1.jpg);
+    background-size: cover;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
+
+#section {
+    padding-top: 5%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 
 /* Header Container */
 .header-container {
@@ -36,8 +49,9 @@ header {
 /* Logo */
 
 #logo {
-    width: 200px;
-    height: 120px;
+    width: 150px;
+    height: 100px;
+    border-radius: 20%;
 }
 
 /* Navigation Menu */
@@ -46,12 +60,15 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    padding-right: 15%;
+
 }
 
 /* H1 */
 .h1-container h1 {
     font-size: 4em;
     font-weight: 600;
+    text-align: center;
 }
 
 /* Nav Menu */
@@ -60,35 +77,115 @@ header {
     justify-content: flex-end;
     align-items: center;
     color: white;
-    padding: 10px;
+    padding: 60px 10px 10px;
+    width: auto;
 }
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-link:hover {
+    color: #fafafa;
+}
+
 
 /* Carousel */
 #carousel-container {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 /* Carousel Image */
 img {
-    width: 50px;
     height: 800px;
+    padding: 0;
 }
 
 /* Affirmation-container */
+
 #affirmation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url(../images/background-1.jpg);
     margin: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    height: 200px;
+    opacity: 0.9;
+    display: flex;
+    margin: 1% 5%;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-button {
-    border: none;
+#affirmation-container:hover {
+    transform: scale(1.1);
+}
+
+#affirmation-btn-container button {
+    background-image: url(../images/background-1.jpg);
+    background-position: top;
     padding: 10px 20px;
     text-align: center;
+    width: 50%;
+    color: #FFFFFF;
     text-decoration: none;
+    opacity: 0.9;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     margin: 4px 2px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#affirmation-btn-container button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+#footer-container {
+    background-image: url(../images/background-1.jpg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#paragraph-container p {
+    font-size: 1em;
+    margin-left: 5px;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    float: right;
+    width: 25%;
+    list-style-type: none;
+    margin-right: 5px;
+}
+
+.social-media i {
+    background-color: #FFFFFF;
+    color: #6E0E38;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.4em;
+    margin: 1%;
+    padding: 5px 0 0 8px;
+    transition: 0.35s ease-in-out;
+}
+
+
+.social-media i:hover {
+    background-color: #6E0E38;
+    color: #FFFFFF;
+    transform: scale(1.1);
 }
