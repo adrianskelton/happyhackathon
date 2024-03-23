@@ -9,7 +9,7 @@ def register_view(request):
         user_obj = form.save()
         return redirect('/login/')
     context = {"form": form}
-    return render(request, "/accounts/register.html", context)
+    return render(request, "accounts/register.html", context)
 
 def login_view(request):
     if request.method == "POST":
@@ -23,7 +23,7 @@ def login_view(request):
     context = {
         "form": form
     }
-    return render(request, "/accounts/login.html", context)
+    return render(request, "accounts/login.html", context)
 
 
 def logout_view(request):
@@ -31,4 +31,4 @@ def logout_view(request):
         logout(request)
         next_param = request.GET.get('next', '/')
         return redirect("/login/")
-    return render(request, "/accounts/logout.html", {})
+    return render(request, "accounts/logout.html", {})
