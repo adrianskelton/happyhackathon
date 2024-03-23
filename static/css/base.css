@@ -8,6 +8,11 @@
     z-index: 1000;
 }
 
+/* margin in the navbar next to note */
+.note-link {
+    margin-right: 20px; 
+}
+
 .content-container {
     margin-top: 120px; 
 }

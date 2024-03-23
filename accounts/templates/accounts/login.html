@@ -2,7 +2,7 @@
 {% block content %}
 
 {% if not request.user.is_authenticated %}
-    <div>
+    <div class="content-container">
         <form method='POST'>{% csrf_token %}
             {{ form.as_p }}
             <button type='submit'>Login</button>
