@@ -111,7 +111,7 @@ DATABASES = {
         'PORT': '5432',                                  
     }
 }
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'  
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Password validation
