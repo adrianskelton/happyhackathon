@@ -29,6 +29,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
     'https://3001-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',
     'https://3002-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',
+    'https://positive-note-ec9b8f1f6fb7.herokuapp.com',
+    'localhost',
 ]
 
 # Application definition
