@@ -41,3 +41,26 @@
     left: 0;
     z-index: 1000; 
 }
+
+
+/* Rate Us Modal */
+
+.rating{
+    text-align: center;
+}
+.star {
+    margin: 0 5px 15px;
+    font-size: 1.8em;
+    color: #929292;
+    cursor: pointer;    
+}
+.star:hover{
+    transform: scale(1.2);
+}
+#modal-header{
+    display: block;
+    text-align: center;
+}
+.colored {
+    color: gold;
+}

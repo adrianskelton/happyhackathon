@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - on a + note{% endblock %}
+
+{% block content %}
+
+<div style="height:200px">
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="rating-Btn">
+    Rate Us
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" id="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Give us a rating !
+                </h1>
+            </div>
+            <div class="modal-body">
+                <form action="https://formdump.codeinstitute.net" method="post" target="_blank">
+                    <div class="rating">
+                        <input type="number" name="rating" value="" hidden>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="rating-sutmitbtn">
+                    Submit
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/0f5fd35744.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    let stars = document.querySelectorAll(".rating .star");
+    let ratingValue = document.querySelector(".rating input");
+    let ratingBtn = document.getElementById("rating-Btn");
+    
+    stars.forEach((star, index1) => {
+        star.addEventListener('click', function () {
+            ratingValue.value = index1 + 1;
+            stars.forEach((star, index2) => {
+                if (index1 >= index2) {
+                    star.classList.add("colored");
+                } else {
+                    star.classList.remove("colored");
+                }
+            });
+        });
+    });
+
+    ratingBtn.addEventListener('click', function () {
+        stars.forEach((star, index1) => {
+            star.classList.remove("colored"); 
+        })
+    } )
+
+</script>
+
+{% endblock %}
