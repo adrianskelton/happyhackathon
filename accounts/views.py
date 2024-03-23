@@ -19,7 +19,7 @@ def login_view(request):
             login(request, user)
             return redirect('/')
     else:
-        form = AuthenticationForm(request)
+        form = AuthenticationForm(request) 
     context = {
         "form": form
     }
