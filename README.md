@@ -10,8 +10,8 @@ Moreover, "On a + Note" fosters a sense of community among its users. Through in
 
 With its user-friendly interface, dynamic content, and emphasis on community engagement, "On a + Note" stands as a digital sanctuary for those seeking to cultivate a more optimistic outlook on life. Join us today and embark on a journey towards greater positivity, one affirmation at a time.
 
-Live Website can be viewed [here]() <br>
-You can check out my Repository [here](https://github.com/adrianskelton/happyhackathon)
+Live Website can be viewed [here on heroku](https://positive-note-ec9b8f1f6fb7.herokuapp.com/) <br>
+You can check out the Repository [here on github](https://github.com/adrianskelton/happyhackathon)
 
 ## Table of contents
  1. [ UX ](#ux)
@@ -47,9 +47,28 @@ You can check out my Repository [here](https://github.com/adrianskelton/happyhac
 - Typography:
 	-  Imported **Protest Revolution** from Google font used as the primary font, and **Sans-Serif** used as the secondary font.
 
-### Wireframe
+### Wireframes
 
-![Wireframe]()
+<details>
+  <summary>Expand</summary>
+
+![Wireframe](static/images/readme/wireframe-landing.png)
+Landing page
+
+![Wireframe](static/images/readme/wireframe-sign.png)
+Sign in page
+
+![Wireframe](static/images/readme/wireframe-user.png)
+User profile page
+
+![Wireframe](static/images/readme/wireframe-login.png)
+Login page
+
+![Wireframe](static/images/readme/wireframe-note.png)
+Affirmation generation page
+
+</details>
+
 
 
 ## Features
