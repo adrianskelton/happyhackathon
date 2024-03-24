@@ -10,20 +10,72 @@
 <div class="container-fluid">
     <div class="row mt-4 container-note">
         <div class="col-3 ml-5">
-            <button type="button" class="btn btn-outline-primary col-12 mb-3">Motivation</button>
-            <button type="button" class="btn btn-outline-primary col-12 mb-3">Self-love</button>
-            <button type="button" class="btn btn-outline-primary col-12 mb-3">Pick me up</button>
-            <button type="button" class="btn btn-outline-primary col-12 mb-3">Confidence</button>
-            <button type="button" class="btn btn-outline-primary col-12 mb-2">Funny</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Success</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Courage</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Mindfulness</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Positivity</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Gratitude</button>
-            <button type="button" class="btn btn-outline-primary col-12 mt-2">Peace</button>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Motivation">
+                <button type="submit" class="btn btn-outline-primary col-12 mb-3">Motivation</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Self-love">
+                <button type="submit" class="btn btn-outline-primary col-12 mb-3">Self-love</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Pick-Me-Up">
+                <button type="submit" class="btn btn-outline-primary col-12 mb-3">Pick Me Up</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Confidence">
+                <button type="submit" class="btn btn-outline-primary col-12 mb-3">Confidence</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Funny">
+                <button type="submit" class="btn btn-outline-primary col-12 mb-3">Funny</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Success">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Success</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Courage">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Courage</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Mindfulness">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Mindfulness</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Positivity">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Positivity</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Gratitude">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Gratitude</button>
+            </form>
+            <form action="{% url 'get_random_affirmation' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category" value="Peace">
+                <button type="submit" class="btn btn-outline-primary col-12 mt-2">Peace</button>
+            </form>
         </div>
         <div class="col-8">
-            <div class="note-window ml-4"></div>
+            <div class="note-window ml-4">
+                {% if affirmation %}
+                    <h2 class="text-center">Category: {{ affirmation.category }}</h2>
+                    <p>{{ affirmation.text }}</p>
+                {% else %}
+                    <h2 class="text-center">We are so sorry!</h2>
+                    <h3 class="text-center">There seems to be a problem with this affirmation. Please check back later.</h3>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
