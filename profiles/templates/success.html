@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="vh-100 d-flex justify-content-center align-items-center" style="height: 80vh !important;">
+<div class="vh-100 d-flex justify-content-center align-items-center" style="height: 75vh !important;">
     <div>
         <div class="mb-4 text-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
@@ -20,8 +20,8 @@
             <!-- Display a "Thank you!" heading -->
             <p>Your contact information and message was successfully submitted</p>
             <!-- Display a success message -->
-            <button class="btn btn-primary">
-                <a class="nav-link" href="{% url 'home'  %}">Back Home</a>
+            <button class="btn back-home">
+                <a class="nav-link home-link" href="{% url 'home'  %}">Back Home</a>
                 <!-- Display a "Back Home" button with a link -->
             </button>
         </div>

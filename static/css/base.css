@@ -298,3 +298,29 @@ textarea#id_message {
 }
 }
 
+/*-----------------------------csuccess.html-----------------------------------------*/
+
+.text-success {
+    color: #f758c5 !important;
+}
+
+button.btn.back-home {
+    background-color: #666666;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+a.nav-link.home-link {
+    color: white;
+}
+
+/* Enlarge effect for the button on hover */
+.back-home:hover {
+    transform: scale(1.1); /* Enlarge the button by 10% */
+}
+
+/* Style for the link */
+.home-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
