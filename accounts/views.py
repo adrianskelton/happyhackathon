@@ -1,15 +1,25 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.shortcuts import render, redirect
-from django.urls import reverse  
+from django.urls import reverse
+from django.contrib import messages
+
 
 def register_view(request):
-    form = UserCreationForm(request.POST or None)
-    if form.is_valid():
-        user_obj = form.save()
-        return redirect('/login/')
-    context = {"form": form}
-    return render(request, "accounts/register.html", context) 
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            password = form.cleaned_data.get('password2')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, f'You have successfully created an account!')
+            return redirect('home')  # Redirect to the home page after successful registration
+    else:
+        form = UserCreationForm()
+    return render(request, 'accounts/register.html', {'form': form})
 
 def login_view(request):
     if request.method == "POST":
