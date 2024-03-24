@@ -4,5 +4,6 @@
     <h1>Random Affirmation</h1>
     <p>{{ affirmation.text }}</p>
     <p>Category: {{ affirmation.category }}</p>
-    <a href="{% url 'affirmation' %}">Get Another Random Affirmation</a>
+    <a href="{% url 'affirmation' %}"><i class="fas fa-random"></i> Get Another Random Affirmation</a>
+    <a href="{% url 'favorite' affirmation.id %}"><i class="far fa-heart"></i> Add to Favorites</a>
 {% endblock %}
