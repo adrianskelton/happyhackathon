@@ -3,84 +3,128 @@
 {% block title %}Home - on a + note{% endblock %}
 
 {% block content %}
-<div class="hero-container content-container">
-    <div class="hero-image">
-        <!-- Your hero image goes here -->
-    </div>
-    <div class="hero-overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Your logo and name goes here -->
-                    <img src="{% static 'images/logo.png' %}" alt="logo">
-                    <h1 class="hero-title">Your Project Name</h1>
-                    <p class="hero-tagline">Your project tagline goes here</p>
-                </div>
-            </div>
+<div class="container-fluid">
+    <div class="img-container">
+        <div class="dark-overlay">
+            <div class="container-fluid hero-image"></div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 p-3 mb-2 d-flex justify-content-center quote-wrapper">
+            <!-- <img class="quote" src="../static/images/logo.png" alt="On a + Note Logo"> -->
+            <h1 class="col-9 col-sm-10 col-lg-10 quote text-center">On A + Note</h2>
+                <p class="line text-center">Welcome to a world of happiness and positivity. Discover daily affirmations
+                    to uplift your spirits and brighten your day.</p>
         </div>
     </div>
 </div>
 
-
-
-<div class="container mt-5">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada velit ut mauris fermentum, id
-                tempus lectus vestibulum. Donec nec magna id justo laoreet feugiat. Vivamus commodo diam quis metus
-                vehicula, nec finibus quam posuere. Aenean consectetur fringilla nulla a vehicula. Phasellus a magna nec
-                dui tempus volutpat.</p>
-            <a href="placeholder" class="btn btn-primary">Affirmations</a>
+        <h2 class="col-6 ml-5 px-5">
+            Unlock happiness with On+ Note - Affirmations. Save your favorite affirmations for a brighter day ahead.
+            Whether logged in or as a guest, find inspiration at your fingertips. Elevate your mood with personalized
+            affirmations, anytime, anywhere. Join us in spreading positivity, effortlessly
+        </h2>
+        <div class="col-5 d-flex justify-content-center align-items-center btn-height">
+            <button type="button" class="btn btn-outline-dark col-3 mb-5">Affirmations</button>
             <!-- Placeholder link for now -->
             <!-- <a href="#" class="btn btn-primary">Affirmations</a> -->
         </div>
     </div>
 </div>
+<div class="container-fluid notes-row">
+    <div class="row pt-5 mt-5">
+        <div class="col-4 d-flex justify-content-center align-items-start">
+            <div class="square-border">
+                Today, I embrace challenges with enthusiasm and determination. I am capable of overcoming
+                any obstacle that comes my way. My drive and persistence lead me to success.
+            </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center align-items-center second-note">
+            <div class="square-border">
+                Today, I'll attack my tasks with the fervor of a squirrel on caffeine, and the grace of a giraffe doing
+                ballet.
+                I'll handle challenges with the finesse of a ninja kitten and the optimism of a dog chasing its own
+                tail. Let's turn
+                this day into a comedy show and make the world wonder what we're up to!
+            </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center align-items-start">
+            <div class="square-border">
+                Inhale positivity, exhale negativity. Today, I choose happiness over worry, optimism over doubt.
+                I am surrounded by love, light, and endless possibilities. Let's rock this day with a smile!
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Carousel with contributors-->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+<div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner mb-5">
         <div class="carousel-item active">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="https://github.com/GOkwori" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-george.png" alt="George">
-                        <p class="contributor-name">George</p>
-                    </a>
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-2 mx-auto"> <!-- Add mx-auto class here -->
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U0622EYTLSK-664ace38940d-512" class="card-img-top" alt="George">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">George</h5>
+                        <a class="card-text" href="https://github.com/GOkwori" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="https://github.com/MiaRasmussen05" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-mia.png" alt="Mia">
-                        <p class="contributor-name">Mia</p>
-                    </a>
+                <div class="col-sm-2 mx-auto">
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U03L4K3BVML-f9fa622e9538-512" class="card-img-top" alt="Mia">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">Mia</h5>
+                        <a class="card-text" href="https://github.com/MiaRasmussen05" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="https://github.com/missdays" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-jen.png" alt="Jen">
-                        <p class="contributor-name">Jen</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://github.com/Priyanka-Dhanabal" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-priyanka.png" alt="Priyanka">
-                        <p class="contributor-name">Priyanka</p>
-                    </a>
+                <div class="col-sm-2 mx-auto">
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U050ACUSTQ9-7e7c16f3a7f2-512" class="card-img-top" alt="Jen">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">Jen</h5>
+                        <a class="card-text" href="https://github.com/missdays" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="https://github.com/adrianskelton" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-adrian.png" alt="Adrian">
-                        <p class="contributor-name">Adrian</p>
-                    </a>
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-2 mx-auto">
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U05USUPFCN8-6a80bc8adc31-512" class="card-img-top" alt="Priyanka">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">Priyanka</h5>
+                        <a class="card-text" href="https://github.com/Priyanka-Dhanabal" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="https://github.com/adrianskelton" target="_blank" rel="noopener noreferrer">
-                        <img class="d-block w-100" src="static/images/contributer-adrianna.png" alt="Adrianna">
-                        <p class="contributor-name">Adrianna</p>
-                    </a>
+                <div class="col-sm-2 mx-auto">
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U02KA3ZP163-a8cf1d514b1c-512" class="card-img-top" alt="Adrian">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">Adrian</h5>
+                        <a class="card-text" href="https://github.com/adrianskelton" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 mx-auto">
+                    <div class="card">
+                      <img src="https://ca.slack-edge.com/T0L30B202-U03AA6T7GD7-5c7eb20a227f-512" class="card-img-top" alt="Adrianna">
+                      <div class="card-body">
+                        <h5 class="card-title text-center contributor-name">Adrianna</h5>
+                        <a class="card-text" href="https://github.com/adrianskelton" target="_blank" rel="noopener noreferrer">Github</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
                 </div>
                 <!-- Add more contributors as needed -->
             </div>
@@ -96,10 +140,6 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
-
-
-
 
 {% endblock %}
 
