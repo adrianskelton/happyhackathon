@@ -50,7 +50,8 @@ h5 {
 }
 
 .carousel-item img {
-    max-height: 270px;
+    max-width: auto; 
+    height: 270px; 
 }
 
 .content-container {
