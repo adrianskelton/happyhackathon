@@ -2,7 +2,7 @@
     background-color: #CCCCCC;
     height: 120px;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     z-index: 1000;
@@ -26,9 +26,17 @@
     text-align: center;
 }
 
+.carousel-inner {
+    height: 386px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    margin: 0 auto;
+}
+
 .carousel-item img {
-    max-height: 230px;
-    max-width: 230px;
+    max-height: 270px;
 }
 
 .content-container {
@@ -47,16 +55,18 @@
 }
 
 .footer {
-    background-color: #FFFFFF;
+    background-color: #CCCCCC;
     padding: 20px;
     width: 100%;
     max-height: 200px; 
     overflow-y: auto; 
-    position: fixed; 
+    /* position: fixed;  */
     bottom: 0;
     left: 0;
     z-index: 1000; 
 }
+
+/* LANDING PAGE */
 
 .img-container {
     width: 100%;
@@ -67,7 +77,7 @@
     width: 100%;
     height: 500px;
     background-color: #000;
-    background: url('static/images/hero-image.jpg') no-repeat;
+    background: url('https://imgur.com/tEZ1lVB.png') no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,7 +100,7 @@
 .dark-overlay {
     width: 100%;
     height: 100%;
-    background: #38382D;
+    background: #38382d;
     overflow: hidden;
     transition: ease all 2s;
 }
@@ -114,9 +124,9 @@
 }
 
 .quote, .line {
-    width: 97.5%;
+    width: 100%;
     position: absolute;
-    top: 100px;
+    top: -350px;
     color: #fff;
     transition: ease all 1s;
     z-index: 4;
@@ -133,7 +143,44 @@
     text-shadow: 0 0 10px #000;
     font-size: 180%;
     padding: 5% 8%;
-    margin: 8% 0 0 0;
+    margin: 2% 0 0 0;
+}
+
+.notes-row {
+    height: 70vh;
+}
+
+.square-border {
+    width: 30vh;
+    height: 30vh;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.second-note {
+    margin-top: 10%;
+}
+
+/* Rate Us Modal */
+
+.rating{
+    text-align: center;
+}
+.star {
+    margin: 0 5px 15px;
+    font-size: 1.8em;
+    color: #929292;
+    cursor: pointer;    
+}
+.star:hover{
+    transform: scale(1.2);
+}
+#modal-header{
+    display: block;
+    text-align: center;
+}
+.colored {
+    color: gold;
 }
 
 /* Login page */
