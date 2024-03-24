@@ -49,20 +49,6 @@
                                 Affirmation</a>
                         </li>
 
-                        <!-- Add the category dropdown button -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-folder"></i> Categories
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-                                <!-- Add your category options dynamically here -->
-                                <li><a class="dropdown-item" href="#">Category 1</a></li>
-                                <li><a class="dropdown-item" href="#">Category 2</a></li>
-                                <!-- Add more categories as needed -->
-                            </ul>
-                        </li>
-
                         <ul class="navbar-nav justify-content-end align-self-center">
                             {% if user.is_authenticated %}
                             <li class="nav-item dropdown">
@@ -118,7 +104,7 @@
                         rel="noopener noreferrer">GitHub Repository</a></p>
             </div>
             <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                     id="rating-Btn">
                     Rate Us
                 </button>
