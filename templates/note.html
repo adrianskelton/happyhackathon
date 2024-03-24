@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Note - on a + note{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid text-center mt-5">
+    <h1>Affirmations</h1>
+</div>
+<div class="container-fluid">
+    <div class="row mt-4 container-note">
+        <div class="col-3 ml-5">
+            <button type="button" class="btn btn-outline-primary col-12 mb-3">Motivation</button>
+            <button type="button" class="btn btn-outline-primary col-12 mb-3">Self-love</button>
+            <button type="button" class="btn btn-outline-primary col-12 mb-3">Pick me up</button>
+            <button type="button" class="btn btn-outline-primary col-12 mb-3">Confidence</button>
+            <button type="button" class="btn btn-outline-primary col-12 mb-2">Funny</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Success</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Courage</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Mindfulness</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Positivity</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Gratitude</button>
+            <button type="button" class="btn btn-outline-primary col-12 mt-2">Peace</button>
+        </div>
+        <div class="col-8">
+            <div class="note-window ml-4"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
