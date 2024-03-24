@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}on a + note{% endblock %}</title>
+    <!-- Favicon for the page -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap CSS -->
@@ -88,6 +90,18 @@
                         </ul>
                     </ul>
                 </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 msg2 justify-content-center">
+                <!-- Display messages -->
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show mt-2 justify-content-center" id="msg" role="alert">
+                    {{ message | safe }}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -182,6 +196,13 @@
                 star.classList.remove("colored");
             })
         })
+
+        // <!-- Close alert messages after a certain time -->
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 4000);
     </script>
 </body>
 
