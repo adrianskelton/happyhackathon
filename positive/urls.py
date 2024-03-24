@@ -17,18 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from affirmation.views import home
+from profiles.views import view_profile
 
 from accounts.views import (
     login_view, 
     logout_view,
     register_view,
+    view_profile,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('', include('profiles.urls')),
+   
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('register/', register_view, name='register'),
+    path('profile/', view_profile, name='view_profile'),
 ]
 
