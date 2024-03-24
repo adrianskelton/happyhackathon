@@ -341,6 +341,9 @@ Remember to replace `your-username` and `your-repository` with your actual GitHu
 - **Code Snippets and Libraries**:
   - Django: The project utilizes the [Django](https://www.djangoproject.com/) framework for web development. Official Django documentation was instrumental in the development process.
   - Heroku Deployment: Guidance on deploying Django apps to Heroku was found on [Heroku's Official Documentation](https://devcenter.heroku.com/articles/getting-started-with-python).
+- **404 Page** 404 page [CodePen](https://codepen.io/Navedkhan012/pen/vrWQMY).
+- **Account Pages** [Styling django-allauth Authentication Pages](https://builtwithdjango.com/blog/styling-authentication-pages).
+- **Favicon** [Ebay](https://www.ebay.de/itm/394776621113?chn=ps&_ul=DE&_trkparms=ispr%3D1&amdata=enc%3A1XsUnb_P1RRKUKf0RxEv9Hw87&norover=1&mkevt=1&mkrid=707-168914-907737-8&mkcid=2&itemid=394776621113&targetid=293946777986&device=c&mktype=pla&googleloc=1000927&poi=&campaignid=20354691798&mkgroupid=151907125395&rlsatarget=pla-293946777986&abcId=&merchantid=678252821&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA7WSLd2PycWVqT635BwjkGZZ-pREpZkF8H81_QJxylCvVhTdkdQbhhoCesQQAvD_BwE).
 
 
 *****************

@@ -27,6 +27,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            messages.success(request, f'You have successfully loged in!')
             return redirect('/') 
     else:
         form = AuthenticationForm(request)
@@ -40,6 +41,7 @@ def logout_view(request):
     if request.method == "POST":
         logout(request)
         next_param = request.GET.get('next', '/')
+        messages.success(request, f'You have successfully loged out!')
         return redirect("/")
     return render(request, "accounts/logout.html", {})
 

@@ -400,6 +400,11 @@ justify-content: end;
         width: 60%;
     }
 }
+    /* Hide note 2 and note 3 */
+    .note2,
+    .note3 {
+        display: none;
+    }
 
 /* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -538,3 +543,12 @@ p.mt-5.text-center.are-you-sure {
     margin-bottom: 4rem;
 }
 
+/*-----------------------------messages-----------------------------------------*/
+
+.col-md-8.offset-md-2.msg2.justify-content-center {
+    background-color: #1e7e34;
+    margin-top: 1rem;
+    color: white;
+    display: flex;
+    font-size: large;
+}
