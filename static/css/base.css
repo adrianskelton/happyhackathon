@@ -234,6 +234,21 @@ h1, h2, h3, h4, h5 {
 
 .container-note {
     margin-bottom: 29px;
+    padding: 10px;
+}
+
+.container-note .btn{
+    background-color: hsl(292, 79%, 96%);
+    color: #000;
+    border-color: #000;
+    margin: 5px auto;
+    
+}
+
+.container-note .btn:hover{
+    color: #5c005f;
+    border-color: #000;
+    background-color: hsl(292, 93%, 89%);
 }
 
 .note-window {
@@ -241,6 +256,17 @@ h1, h2, h3, h4, h5 {
     height: 100%;
     border: 1px solid #000;
     padding: 5%;
+}
+
+#reset-margin{
+    margin: 5px auto !important;
+}
+
+.note-display{
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: hsl(60, 80%, 96%);
+    cursor: pointer;
 }
 
 /* Hide the mobile logo by default */
@@ -255,5 +281,29 @@ h1, h2, h3, h4, h5 {
     }
     .logo.mobile {
         display: inline-block;
+    }
+
+
+}
+
+/*responsiveness for note section*/
+@media (max-width: 650px){
+    #container-fluid{
+        padding: unset;
+        margin: unset;   
+    }
+    .container-note{
+        display:block;
+    }
+    
+    #note-innercontainer, #note-display, #note-display-container{
+        margin: unset !important;
+        margin-bottom: 20px !important;
+        max-width: unset;
+        text-align: center;
+    }
+
+    .container-note .btn{
+        width: 60%;
     }
 }
