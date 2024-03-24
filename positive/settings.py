@@ -23,6 +23,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io', '127.0.0.1', '0.0.0.0', 'localhost', '8000-adrianskelt-happyhackat-rzsjp8tua6v.ws-eu110.gitpod.io', '8000-adrianskelt-happyhackat-t6ku3p4u6k3.ws-eu110.gitpod.io, *.ws-eu110.gitpod.io']
 ALLOWED_HOSTS = ['localhost', '8000-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'positive-note-ec9b8f1f6fb7.herokuapp.com', '8000-adamolnar-happyhackatho-rytviz7s9ne.ws-eu110.gitpod.io', '8000-miarasmusse-happyhackat-jyvjjzwpw9i.ws-eu110.gitpod.io']
+
 CSRF_TRUSTED_ORIGINS = ['https://*.ws-eu110.gitpod.io','https://*.ws-eu110.gitpod.io', 'http://*.ws-eu110.gitpod.io','http://*.ws-eu110.gitpod.io', 'https://3001-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io', 'https://3002-adrianskelt-happyhackat-3ru8g22ktk1.ws-eu110.gitpod.io',]
 
 CORS_ORIGIN_ALLOW_ALL = True 
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'widget_tweaks',
     'affirmation',
     'profiles',
     'accounts',
@@ -182,3 +184,17 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'  
+
+# Default Account email validation
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_UNIQUE_EMAIL = False
+ACCOUNT_SESSION_REMEMBER = True
+
+# Built-in views for the password reset process.
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Custom ErrorList form for signup.html
+ACCOUNT_FORMS = {
+  'register': 'profile.forms.CustomSignUpForm',
+  'login': 'profile.forms.CustomLoginForm',
+}
