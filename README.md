@@ -30,7 +30,7 @@ Explore the repository [On a +ve Note on github](https://github.com/adrianskelto
  7. [ Deployment](#deployment)
  8. [ Citation of Sources](#credits)
 
-## UX
+## User Experience (UX)
 
 ### `Site Goal`
 The primary goal of "On a +ve Note" is to foster an environment that encourages positive thinking and personal growth. Our platform is dedicated to offering users daily affirmations that serve as powerful tools for nurturing optimism, resilience, and a strong belief in oneself. By integrating the practice of affirmations into daily routines, we aim to help individuals cultivate a mindset geared towards personal development and well-being.
@@ -235,7 +235,7 @@ To maintain code quality and ensure adherence to web standards, the following va
 
 **JavaScript Validation**:
 - Tool: [JSHint](https://jshint.com/)
-- Result: No errors or warnings found.
+- Result: No errors found.
 
 ### `Performance Testing`
 
@@ -342,10 +342,6 @@ Remember to replace `your-username` and `your-repository` with your actual GitHu
   - Django: The project utilizes the [Django](https://www.djangoproject.com/) framework for web development. Official Django documentation was instrumental in the development process.
   - Heroku Deployment: Guidance on deploying Django apps to Heroku was found on [Heroku's Official Documentation](https://devcenter.heroku.com/articles/getting-started-with-python).
 
-### `Additional Resources`
-
-- **Design Inspiration**: Design cues and user experience enhancements were inspired by [Behance](https://www.behance.net/) and [Awwwards](https://www.awwwards.com/), where I found innovative web design trends and user interface ideas.
-- **Development Tools**: The project benefited from the use of [Visual Studio Code](https://code.visualstudio.com/) as the primary code editor, [Git](https://git-scm.com/) for version control, and [GitHub](https://github.com/) for repository hosting and deployment facilitation.
 
 *****************
 
