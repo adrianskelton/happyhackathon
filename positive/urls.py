@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from affirmation.views import home
-from profiles.views import ProfileDetailView
+from profiles.views import view_profile
 
 from accounts.views import (
     login_view, 
@@ -29,10 +29,12 @@ from accounts.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-   
+
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('register/', register_view, name='register'),
-    path('', include('profiles.urls')),
+
+    path('profile/', view_profile, name='view_profile'),
+    path('', include('affirmation.urls')),
 ]
 
