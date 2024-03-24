@@ -32,3 +32,15 @@ def logout_view(request):
         next_param = request.GET.get('next', '/')
         return redirect("/login/")
     return render(request, "accounts/logout.html", {})
+
+def view_profile(request):
+    user = request.user
+    profile = Profile.objects.get(owner=user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('view_profile')
+    else:
+        form = ProfileForm(instance=profile)
+    return render(request, 'profile.html', {'form': form})
