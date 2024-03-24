@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'profiles',
     'accounts',
     'corsheaders',
-    'favorites'
+    'favorites',
 ]
 
 SITE_ID = 1
