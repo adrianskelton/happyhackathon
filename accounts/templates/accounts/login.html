@@ -2,32 +2,35 @@
 {% load widget_tweaks %}
 
 {% block content %}
-<div class="flex items-center justify-center px-4 py-12 my-4 sm:px-6 lg:px-8">
-    <div class="w-full max-w-md space-y-8">
-        <div>
-            <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
-                Log In
-            </h2>
-        </div>
-        <div class="card-3d-wrap mx-auto" id="login-card">
-            <div class="card-3d-wrapper">
-                <div class="card-front">
-                    <div class="center-wrap">
-                        <form class="login" method="POST" action="{% url 'login' %}">
-                            {% csrf_token %}
-                            {{ form.non_field_errors | safe }}
-                            <div class="form-group">
-                                {{ form.username.errors | safe }}
-                                <label for="{{ form.username.id_for_label }}">Username:</label>
-                                {% render_field form.username class="form-control" %}
-                            </div>
-                            <div class="form-group">
-                                {{ form.password.errors | safe }}
-                                <label for="{{ form.password.id_for_label }}">Password:</label>
-                                {% render_field form.password class="form-control" %}
-                            </div>
-                            <button type="submit" class="btn btn-primary">Log In</button>
-                        </form>
+<div class="login-container">
+    <div class="flex items-center justify-center px-4 py-12 my-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md space-y-8">
+            <div>
+                <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+                    Log In
+                </h2>
+            </div>
+            <div class="card-3d-wrap mx-auto" id="login-card">
+                <div class="card-3d-wrapper">
+                    <div class="card-front">
+                        <div class="center-wrap">
+                            <form class="login" method="POST" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                {{ form.non_field_errors | safe }}
+                                <div class="form-group">
+                                    {{ form.username.errors | safe }}
+                                    <label for="{{ form.username.id_for_label }}">Username:</label>
+                                    {% render_field form.username class="form-control" %}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password.errors | safe }}
+                                    <label for="{{ form.password.id_for_label }}">Password:</label>
+                                    {% render_field form.password class="form-control" %}
+                                </div>
+                                <button type="submit" class="btn btn-primary login-btn">Log In</button>
+                            </form>
+                            <p class="signup-text"><a href="accounts/templates/accounts/register.html">Sign up </a>if you don't have an account.</p>
+                        </div>
                     </div>
                 </div>
             </div>
