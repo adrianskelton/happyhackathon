@@ -304,6 +304,21 @@ justify-content: end;
 
 .container-note {
     margin-bottom: 29px;
+    padding: 10px;
+}
+
+.container-note .btn{
+    background-color: hsl(292, 79%, 96%);
+    color: #000;
+    border-color: #000;
+    margin: 5px auto;
+    
+}
+
+.container-note .btn:hover{
+    color: #5c005f;
+    border-color: #000;
+    background-color: hsl(292, 93%, 89%);
 }
 
 .note-window {
@@ -313,6 +328,16 @@ justify-content: end;
     padding: 5%;
 }
 
+#reset-margin{
+    margin: 5px auto !important;
+}
+
+.note-display{
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: hsl(60, 80%, 96%);
+    cursor: pointer;
+}
 
 /* Hide the mobile logo by default */
 .logo.mobile {
@@ -343,7 +368,29 @@ justify-content: end;
     .card3 {
         display: none;
     }
+}
 
+/*responsiveness for note section*/
+@media (max-width: 650px){
+    #container-fluid{
+        padding: unset;
+        margin: unset;   
+    }
+    .container-note{
+        display:block;
+    }
+    
+    #note-innercontainer, #note-display, #note-display-container{
+        margin: unset !important;
+        margin-bottom: 20px !important;
+        max-width: unset;
+        text-align: center;
+    }
+
+    .container-note .btn{
+        width: 60%;
+    }
+}
     /* Hide note 2 and note 3 */
     .note2,
     .note3 {
