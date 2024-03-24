@@ -4,6 +4,7 @@ from django.urls import path, include
 urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('success/', views.success, name='success'),
+    path('404/', views.custom_404, name='404'),
 
     path('<name>/', views.ProfileDetailView.as_view(), name='profile'),
     path('create_profile/', views.CreateProfileView.as_view(), name='create_profile'),
