@@ -1,31 +1,37 @@
 {% extends "base.html" %}
-
 {% load static %}
 
-
-{% load i18n %}
-
 {% block content %}
-    <div id="logout-container">
-        <div class="row logout-container">
-            <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                <div class="col-md-12 center-block mt-3">
-                    <h3>{% trans "Log Out" %}</h3>  <!-- Displays the "Sign Out" heading with translation support -->
-                    <p id="are-you-sure" class="mt-5">{% trans 'Are you sure you want to Log Out?' %}</p>  <!-- Displays a confirmation message with translation support -->
-                </div> 
-                <div class="row">
-                    <div class="col-md-12 mt-3 center-block">
-                        <form method="post" action="{% url 'logout' %}" class=" col-12 text-center align-self-center py-5">
-                            {% csrf_token %}  <!-- Generates a CSRF token for security -->
-                            {% if redirect_field_value %}
-                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                            {% endif %}
-                            <!-- Handles redirect information if available -->
-                            <button class="btn-lg btn-signup right" type="submit">{% trans 'Log Out' %}</button>  <!-- Displays a "Sign Out" button with translation support -->
-                        </form>
+<div class="login-container">
+    <div class="flex items-center justify-center px-4 py-12 my-4 sm:px-6 lg:px-8 ">
+        <div class="w-full max-w-md space-y-8">
+            <div>
+                <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+                    Log Out
+                </h2>
+            </div>
+            <div class="card-3d-wrap mx-auto" id="logout-card">
+                <div class="card-3d-wrapper">
+                    <div class="card-front">
+                        <div class="center-wrap">
+                            <p class="mt-5 text-center are-you-sure">Are you sure you want to log out?</p>
+                            <form method="post" action="{% url 'logout' %}" class="mt-8 space-y-6">
+                                {% csrf_token %}
+                                {% if redirect_field_value %}
+                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                {% endif %}
+                                <div class="text-center push-it-down">
+                                    <div class="d-flex justify-content-center"> <!-- Center the buttons -->
+                                        <button class="btn btn-danger mr-2 hover-enlarge" type="submit">Log Out</button> <!-- Add margin to separate buttons -->
+                                        <a href="{% url 'home' %}" class="btn btn-success hover-enlarge">Cancel</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
+</div>
 {% endblock %}

@@ -466,7 +466,7 @@ textarea#id_message {
 }
 }
 
-/*-----------------------------csuccess.html-----------------------------------------*/
+/*-----------------------------success.html-----------------------------------------*/
 
 .text-success {
     color: #f758c5 !important;
@@ -491,4 +491,49 @@ a.nav-link.home-link {
 .home-link {
     text-decoration: none;
     color: inherit; /* Inherit text color from parent */
+
+}
+
+/*-----------------------------register.html-----------------------------------------*/
+
+.form-group.no-label {
+    margin: 0;
+}
+
+p.signup-text.text-center {
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+a#green {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.register-btn {
+    transition: transform 0.3s ease; /* Add a transition effect for the transform property */
+}
+
+.register-btn:hover {
+    transform: scale(1.1); /* Enlarge the button by 10% on hover */
+}
+
+.hover-enlarge:hover {
+    transform: scale(1.1);
+}
+
+ul.errorlist {
+    color: #d21e1e;
+    border: solid 2px;
+    border-color: #d21e1e;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p.mt-5.text-center.are-you-sure {
+    margin-bottom: 2rem;
+}
+
+.text-center.push-it-down {
+    margin-bottom: 4rem;
 }
