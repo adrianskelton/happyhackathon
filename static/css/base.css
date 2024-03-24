@@ -47,12 +47,16 @@ h5 {
 
 .carousel-item {
     margin: 0 auto;
+    text-align: center; /* Center align the content */
 }
 
 .carousel-item img {
-    max-width: auto; 
-    height: 270px; 
+    height: 270px; /* Keep the height at 270px */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    display: inline-block; /* Prevents images from stacking */
 }
+
 
 .content-container {
     margin-top: 120px;
@@ -212,6 +216,10 @@ justify-content: end;
     font-weight: 600;
     text-shadow: 0 0 10px #000000;
     margin: -35px;
+}
+
+.quote-text {
+
 }
 
 .line {
@@ -392,14 +400,6 @@ justify-content: end;
         width: 60%;
     }
 }
-    /* Hide note 2 and note 3 */
-    .note2,
-    .note3 {
-        display: none;
-    }
-}
-
-
 
 /* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -537,3 +537,4 @@ p.mt-5.text-center.are-you-sure {
 .text-center.push-it-down {
     margin-bottom: 4rem;
 }
+
