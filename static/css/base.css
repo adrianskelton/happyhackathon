@@ -1,8 +1,12 @@
 body {
-    font-family: 'Bad Script', cursive;  
+    font-family: 'Bad Script', cursive;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Happy Monkey', sans-serif;
 }
 
@@ -18,7 +22,7 @@ h1, h2, h3, h4, h5 {
 
 /* margin in the navbar next to note */
 .note-link {
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .footer img {
@@ -30,7 +34,9 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: center;
 }
-.footer .col-md-4, .footer .col-lg-3 {
+
+.footer .col-md-4,
+.footer .col-lg-3 {
     text-align: center;
 }
 
@@ -48,7 +54,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .content-container {
-    margin-top: 120px; 
+    margin-top: 120px;
 }
 
 /* CSS for Contributor Names footer */
@@ -66,15 +72,63 @@ h1, h2, h3, h4, h5 {
     background-color: #CCCCCC;
     padding: 20px;
     width: 100%;
-    max-height: 200px; 
-    overflow-y: auto; 
+    max-height: 200px;
+    overflow-y: auto;
     /* position: fixed;  */
     bottom: 0;
     left: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 /* LANDING PAGE */
+
+.note.note1 {
+    background-color: #ffcc66; /* Orange */
+}
+
+.note.note2 {
+    background-color: #99ccff; /* Blue */
+}
+
+.note.note3 {
+    background-color: #99ff99; /* Green */
+}
+
+.note {
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* Ensure the z-index works properly */
+}
+
+/* Style the top-left corner of the note */
+.note::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #d4d4d4;
+    width: 0;
+}
+
+/* Style the bottom-right corner of the note */
+.note::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #d4d4d4;
+    width: 0;
+}
+
+.button-affirmation {
+justify-content: end;
+}
 
 .img-container {
     width: 100%;
@@ -97,9 +151,11 @@ h1, h2, h3, h4, h5 {
     0% {
         opacity: 0.5;
     }
+
     40% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.5;
     }
@@ -119,19 +175,28 @@ h1, h2, h3, h4, h5 {
     animation: opacity-out 15s infinite ease-in-out;
 }
 
+/* For the text on landing page to be spaced" */
+
+.margin-20 {
+    margin-top: 20px;
+}
+
 @keyframes opacity-out {
     0% {
         opacity: 1;
     }
+
     40% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
-.quote, .line {
+.quote,
+.line {
     width: 100%;
     position: absolute;
     top: -350px;
@@ -145,6 +210,7 @@ h1, h2, h3, h4, h5 {
     font-size: 400%;
     font-weight: 600;
     text-shadow: 0 0 10px #000000;
+    margin: -35px;
 }
 
 .line {
@@ -160,7 +226,7 @@ h1, h2, h3, h4, h5 {
 
 .square-border {
     width: 30vh;
-    border: 1px solid black;
+    border: 0px solid black;
     padding: 15px;
 }
 
@@ -170,29 +236,33 @@ h1, h2, h3, h4, h5 {
 
 /* Rate Us Modal */
 
-.rating{
+.rating {
     text-align: center;
 }
+
 .star {
     margin: 0 5px 15px;
     font-size: 1.8em;
     color: #929292;
-    cursor: pointer;    
+    cursor: pointer;
 }
-.star:hover{
+
+.star:hover {
     transform: scale(1.2);
 }
-#modal-header{
+
+#modal-header {
     display: block;
     text-align: center;
 }
+
 .colored {
     color: gold;
 }
 
 /* Login/ logout page */
 
-.login-container{
+.login-container {
     margin: 15em auto;
     width: 80%;
     max-width: 500px;
@@ -201,32 +271,32 @@ h1, h2, h3, h4, h5 {
     padding: 5px 10px;
 }
 
-.login-btn{
+.login-btn {
     width: 100%
 }
 
-.signup-text{
+.signup-text {
     font-size: 0.8em;
     margin-top: 1em;
     text-align: end;
 }
 
-#logout-container{
+#logout-container {
     margin: 15em auto;
     width: 80%;
     max-width: 500px;
 }
 
-.logout-container{
+.logout-container {
     display: block;
 }
 
 /* contact us page */
-.contact-container input{
-    width: 60%;    
+.contact-container input {
+    width: 60%;
 }
 
-.contact-container textarea{
+.contact-container textarea {
     width: 90%;
 }
 
@@ -243,18 +313,68 @@ h1, h2, h3, h4, h5 {
     padding: 5%;
 }
 
+
 /* Hide the mobile logo by default */
 .logo.mobile {
     display: none;
 }
 
-/* Show the mobile logo and hide the desktop logo on screens smaller than 768px (standard tablet and below) */
-@media (max-width: 767.98px) {
-    .logo.desktop {
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* Hide card 2 and card 3 */
+    .card2,
+    .card3 {
         display: none;
     }
-    .logo.mobile {
-        display: inline-block;
+
+    /* Hide note 2 and note 3 */
+    .note2,
+    .note3 {
+        display: none;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Hide card 2 and card 3 */
+    .card2,
+    .card3 {
+        display: none;
+    }
+
+    /* Hide note 2 and note 3 */
+    .note2,
+    .note3 {
+        display: none;
+    }
+}
+
+
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Hide card 2 and card 3 */
+    .card2,
+    .card3 {
+        display: none;
+    }
+
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* CSS styles for large devices here */
+}
+
+@media (max-width: 767.98px) {
+    .container-unlock {
+        font-size: 1.5rem;
+        /* Adjust the font size as needed for smaller screens */
+        line-height: 1.4;
+        /* Adjust the line height as needed for smaller screens */
     }
 }
 
