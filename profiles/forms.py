@@ -14,6 +14,22 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['name', 'content', 'favorite_affirmations', 'emotion_emoji']
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'placeholder': 'Name...',
+                'style': 'padding: 4px; width: 100%;'
+            }),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        profile = super().save(commit=False)
+        if commit:
+            profile.user = self.instance.user
+            profile.save()
+        return profile
 
 
 # ContactForm for handling contact information
