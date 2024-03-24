@@ -9,6 +9,10 @@ def home(request):
     context = {}
     return render(request, "index.html", context)  
 
+def note(request):
+    context = {}
+    return render(request, "note.html", context)  
+
 
 # Category Views
 class CategoryListView(ListView):
