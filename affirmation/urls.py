@@ -8,5 +8,7 @@ urlpatterns = [
     # URL pattern for affirmation with category
     path('affirmation/<slug:category_slug>/', affirmation, name='affirmation_by_category'),
     # add to favorites
-    path('favorite/<int:affirmation_id>/', add_to_favorites, name='favorite'),
+    path('favorites/<int:affirmation_id>/', add_to_favorites, name='favorite'),
+    
+    path('affirmation/<int:pk>/', affirmation, name='affirmation')
 ]
