@@ -124,3 +124,12 @@ def contact(request):
 # View function for a successfully sent contact form.
 def success(request):
     return render(request, 'success.html')
+
+
+# Function that will be called when a 404 error occurs
+def custom_404(request, exception=None):
+    """
+    Custom 404 error view.
+    """
+    return render(
+        request, '404.html', {'exception': exception}, status=404)
