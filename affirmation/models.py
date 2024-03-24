@@ -15,7 +15,7 @@ class Category(models.Model):
         return self.title
 
 class Affirmation(models.Model):
-    text = models.CharField(max_length=255)
+    text = models.CharField(max_length=800)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='affirmations', default=None)
 
