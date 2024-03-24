@@ -135,3 +135,24 @@
     padding: 5% 8%;
     margin: 8% 0 0 0;
 }
+
+/* Login page */
+
+.login-container{
+    margin: 15em auto;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px 0px grey;
+}
+
+.login-btn{
+    width: 100%
+}
+
+.signup-text{
+    font-size: 0.8em;
+    margin-top: 1em;
+    text-align: end;
+}
