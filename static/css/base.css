@@ -257,3 +257,44 @@ h1, h2, h3, h4, h5 {
         display: inline-block;
     }
 }
+
+/*-----------------------------contact.html-----------------------------------------*/
+
+input#id_name {
+    width: 90% !important;
+}
+
+input#id_email {
+    width: 90% !important;
+}
+
+/* CSS animation for bouncing effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Apply bouncing animation to the envelope icon */
+  .bounce {
+    animation: bounce 2s infinite; /* Apply bouncing animation infinitely */
+  }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+/* Adjust width for small screens */
+input#id_name,
+input#id_email {
+    width: 100%  !important; /* Set width to 100% for small screens */
+}
+textarea#id_message {
+    width: 100% !important;
+}
+}
+

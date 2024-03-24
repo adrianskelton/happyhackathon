@@ -21,5 +21,6 @@ urlpatterns = [
 
     path('profile/', view_profile, name='view_profile'),
     path('', include('affirmation.urls')),
+    path('', include('profiles.urls')),
 ]
 
