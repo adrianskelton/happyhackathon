@@ -43,7 +43,7 @@
                             <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
                         </li>
                         
-                        <ul class="navbar-nav justify-content-end align-self-center">
+                        <ul class="navbar-nav justify-content-end align-self-center"> 
                             {% if user.is_authenticated %}
                             <li class="nav-item dropdown"><!-- COMMENTED OUT FOR NOW UNTIL THE VIEWS AND PATHS ARE SORTED, 
                                 WHOEVER IS WORKING ON BOOKMARK LIST ETC, FEEL FREE TO UNCOMMENT THIS AND CORRECT THE VIEWS AND PATHS
@@ -67,7 +67,7 @@
                                 <ul class="dropdown-menu drop-menu border-0" aria-labelledby="offcanvasNavbarDropdownSecond">
                                     <li>
                                         <a class="dropdown-item link p-0 mb-2 ms-3"
-                                        href="{% url 'profile' username=request.user.username %}">Profile</a>
+                                        href="{% url 'profile' username=request.user.username %}">Profile</a> 
                                     </li>
                                     <li>
                                         <a class="dropdown-item link p-0 mb-2 ms-3"
