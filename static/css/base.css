@@ -41,13 +41,12 @@ h5 {
 }
 
 .carousel-inner {
-    height: 386px;
+    height: 396px;
     overflow: hidden;
 }
 
 .carousel-item {
     margin: 0 auto;
-    text-align: center; /* Center align the content */
 }
 
 .carousel-item img {
@@ -71,6 +70,7 @@ h5 {
 .carousel-control-prev,
 .carousel-control-next {
     color: #FFB6C1;
+    width: 30px;
 }
 
 .footer {
@@ -93,6 +93,7 @@ h5 {
 
 .note.note2 {
     background-color: #99ccff; /* Blue */
+    margin-top: 30%;
 }
 
 .note.note3 {
@@ -138,7 +139,11 @@ justify-content: end;
 .button-affirmation:hover {
     justify-content: end;
     background-color: pink;
-    }
+}
+
+.pink {
+    color: #e63cb0;
+}
 
 .img-container {
     width: 100%;
@@ -183,9 +188,6 @@ justify-content: end;
     max-width: 90%;
     margin: 0 0 0 0;
     animation: opacity-out 15s infinite ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* For the text on landing page to be spaced" */
@@ -226,10 +228,6 @@ justify-content: end;
     margin: -35px;
 }
 
-.quote-text {
-
-}
-
 .line {
     text-shadow: 0 0 10px #000;
     font-size: 180%;
@@ -255,6 +253,20 @@ justify-content: end;
 
 .rating {
     text-align: center;
+}
+
+#rating-Btn, .submit-btn {
+    background-color: #e63cb0 !important;
+    color: #FFF!important;
+}
+
+.submit-btn:hover {
+    background-color: #811b61!important;
+}
+
+#rating-sutmitbtn {
+    background-color: #e63cb0;
+    color: #FFF;
 }
 
 .star {
@@ -325,25 +337,34 @@ justify-content: end;
 }
 
 .container-note .btn{
-    background-color: hsl(292, 79%, 96%);
+    background-color: hsl(306, 100%, 90%);
+    box-shadow: 1px 1px 0px #666666;
     color: #000;
-    border-color: #000;
+    border-color: transparent;
     margin: 5px auto;
     
 }
 
 .container-note .btn:hover{
     color: #5c005f;
-    border-color: #000;
-    background-color: hsl(292, 93%, 89%);
+    border-color: transparent;
+    box-shadow: inset 0 0 3px #666666;
+    background-color: hsl(305, 100%, 83%);
 }
 
 .note-window {
     width: 100%;
     height: 100%;
-    border: 1px solid #000;
+    border: 5px double #ff4ed3;
+    box-shadow: inset 0 0 10px #610151;
     padding: 5%;
 }
+
+.affirmation {
+    text-shadow: 3px 2px 1px #e4e3e3;
+    margin-top: 7%;
+}
+
 
 #reset-margin{
     margin: 5px auto !important;
@@ -352,7 +373,6 @@ justify-content: end;
 .note-display{
     border-radius: 10px;
     padding: 30px 20px;
-    background-color: hsl(60, 80%, 96%);
     cursor: pointer;
 }
 
@@ -424,7 +444,7 @@ justify-content: end;
     /* Hide note 2 and note 3 */
     .note2,
     .note3 {
-        display: none;
+        display: block;
     }
 
 /* Medium devices (desktops, 768px and up) */
@@ -478,6 +498,10 @@ input#id_email {
   /* Apply bouncing animation to the envelope icon */
   .bounce {
     animation: bounce 2s infinite; /* Apply bouncing animation infinitely */
+  }
+
+  .bounce {
+    color: #e63cb0;
   }
 
 /* Media query for small screens */
