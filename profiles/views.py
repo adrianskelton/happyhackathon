@@ -127,7 +127,7 @@ def success(request):
 
 
 # Function that will be called when a 404 error occurs
-def custom_404(request):
+def custom_404(request, exception):
     """
     Custom 404 error view.
     """

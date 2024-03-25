@@ -39,6 +39,7 @@ def affirmation(request, category_slug=None):
     # Select a random affirmation from the filtered queryset
     random_affirmation = random.choice(affirmations)
     return render(request, 'affirmation.html', {'affirmation': random_affirmation})
+    
 
 def get_random_affirmation(request):
     if request.method == 'POST':
