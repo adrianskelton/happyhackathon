@@ -281,7 +281,7 @@ Google Lighthouse was utilized to assess the application's performance, accessib
 
 ### `Unfixed Bugs`
 
-Currently, there are no known unfixed bugs in the application. 
+The favorite affirmation function does not work, the link is still left on the notes.html page as we want to work on it later. 
 
 ## Deployment
 
@@ -346,6 +346,8 @@ Remember to replace `your-username` and `your-repository` with your actual GitHu
 
 
 ## Credits
+
+Baby
 
 ### `Content and Resources`
 
