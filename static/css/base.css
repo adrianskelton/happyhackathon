@@ -85,7 +85,7 @@ h5 {
 }
 
 .footer {
-    background-color: #CCCCCC;
+    background-color: #a09e9e;
     padding: 20px;
     width: 100%;
     max-height: 200px;
@@ -629,7 +629,7 @@ p.mt-5.text-center.are-you-sure {
 /*-----------------------------messages-----------------------------------------*/
 
 .col-md-8.offset-md-2.msg2.justify-content-center {
-    background-color: #1e7e34;
+    background-color: #f758c5;
     margin-top: 1rem;
     color: white;
     display: flex;
@@ -671,6 +671,13 @@ p.mt-5.text-center.are-you-sure {
     }
 }
 
+
+
+ul.navbar-nav.ms-auto.mb-2.mb-lg-0.dropdown-menu-end.ml-auto {
+    position: absolute;
+    right: 0;
+    padding-right: 4%;
+
 /*override bootstrap carousel arrows*/
 
 .carousel-control-prev-icon {
@@ -679,4 +686,5 @@ p.mt-5.text-center.are-you-sure {
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fc6c97' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+
 }

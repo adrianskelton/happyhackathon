@@ -51,7 +51,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
                     </li>
-                    <!-- To be added in later developments
+                
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -62,6 +62,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Favorites</a></li>
+                            <li><a class="dropdown-item" href="{% url 'create_affirmation' %}">Create</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item logout-nav" href="{% url 'logout' %}">Logout</a></li>
                         </ul>
@@ -73,11 +74,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'register' %}">Register</a>
                     </li>
-                    {% endif %} -->
+                    {% endif %}
                 </ul>
             </div>
         </div>
     </div>
+    
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 msg2 justify-content-center">
@@ -90,7 +94,7 @@
             </div>
         </div>
     </div>
-    </nav>
+
     <div class="container-fluid mt-3">
         {% block content %}
         {% endblock %}
