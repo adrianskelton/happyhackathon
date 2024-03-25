@@ -22,7 +22,7 @@
             </form>
             <form action="{% url 'get_random_affirmation' %}" method="post">
                 {% csrf_token %}
-                <input type="hidden" name="category" value="Pick-Me-Up">
+                <input type="hidden" name="category" value="Pick-me-up">
                 <button type="submit" class="btn btn-outline-primary col-12 mb-3" id="reset-margin">Pick Me Up</button>
             </form>
             <form action="{% url 'get_random_affirmation' %}" method="post">
@@ -69,11 +69,11 @@
         <div class="col-8" id="note-display-container">
             <div class="note-window ml-4 note-display" id="note-display">
                 {% if affirmation %}
-                    <h2 class="text-center">Category: {{ affirmation.category }}</h2>
-                    <p>{{ affirmation.text }}</p>
+                    <p class="text-center d-flex justify-content-start mb-5">Category: {{ affirmation.category }}</p>
+                    <h2 class="text-center affirmation p-3">{{ affirmation.text }}</h2>
                 {% else %}
-                    <h2 class="text-center">We are so sorry!</h2>
-                    <h3 class="text-center">There seems to be a problem with this affirmation. Please check back later.</h3>
+                    <h2 class="text-center mb-5 mt-5">Welcome!</h2>
+                    <h3 class="text-center affirmation">There seems to be a problem with this affirmation. Please check back later.</h3>
                 {% endif %}
             </div>
         </div>
