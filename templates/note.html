@@ -68,6 +68,9 @@
         </div>
         <div class="col-8" id="note-display-container">
             <div class="note-window ml-4 note-display" id="note-display">
+                <div class="heart-pulse">
+                    <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart-img">
+                </div>
                 {% if affirmation %}
                     <p class="text-center d-flex justify-content-start mb-5">Category: {{ affirmation.category }}</p>
                     <h2 class="text-center affirmation p-3">{{ affirmation.text }}</h2>

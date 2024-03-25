@@ -134,6 +134,8 @@ h5 {
 
 .button-affirmation {
 justify-content: end;
+background-color: pink !important;
+color: #eeeee8 !important;
 }
 
 .button-affirmation:hover {
@@ -256,8 +258,9 @@ justify-content: end;
 }
 
 #rating-Btn, .submit-btn {
-    background-color: #e63cb0 !important;
+    background-color: #f8ace0 !important;
     color: #FFF!important;
+    padding: 10px 20px;
 }
 
 .submit-btn:hover {
@@ -355,13 +358,13 @@ justify-content: end;
 .note-window {
     width: 100%;
     height: 100%;
-    border: 5px double #ff4ed3;
-    box-shadow: inset 0 0 10px #610151;
+    border: 3px double #b58a4e7a;
+    box-shadow: inset 0 0 110px #f1ca52ab;
     padding: 5%;
 }
 
 .affirmation {
-    text-shadow: 3px 2px 1px #e4e3e3;
+    text-shadow: 3px 2px 1px #e4e3e394;
     margin-top: 7%;
 }
 
@@ -531,8 +534,8 @@ button.btn.back-home {
 a.nav-link.home-link, .nav-link, 
 .navbar-light, .navbar-nav, .nav-link  {
     color: white !important;
-    display: !important flex;
-    justify-content: !important end;
+    /*display: !important flex;
+    justify-content: !important end;*/
 }
 
 
@@ -601,4 +604,39 @@ p.mt-5.text-center.are-you-sure {
     color: white;
     display: flex;
     font-size: large;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+}
+
+/* heart pulse on note page */
+
+/* Add this to your CSS file */
+.heart-pulse {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.heart-img {
+    width: 80px;
+    height: auto;
+    animation: pulse 1s infinite alternate; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
