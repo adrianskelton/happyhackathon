@@ -133,6 +133,12 @@ def custom_404(request, exception):
     """
     return render(request, '404.html', status=404)
 
+# Function that will be called when a 404 error occurs
+def custom_400(request):
+    """
+    Custom 400 error view.
+    """
+    return render(request, '400.html', status=404)
 
 # Function that will be called when a 500 error occurs
 def custom_500(request):
