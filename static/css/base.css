@@ -88,16 +88,15 @@ h5 {
 /* LANDING PAGE */
 
 .note.note1 {
-    background-color: #ffcc66; /* Orange */
+    background: linear-gradient(328deg, #ef63aa75, #ffcc6696);
 }
 
 .note.note2 {
-    background-color: #99ccff; /* Blue */
-    margin-top: 30%;
+    background: linear-gradient(328deg, #ef63aa75, #ffcc6696);
 }
 
 .note.note3 {
-    background-color: #99ff99; /* Green */
+    background: linear-gradient(328deg, #ef63aa75, #ffcc6696);
 }
 
 .note {
@@ -105,31 +104,51 @@ h5 {
     border: 1px solid #d4d4d4;
     background-color: #fff;
     padding: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
     border-radius: 8px; /* Rounded corners */
     position: relative; /* Ensure the z-index works properly */
 }
 
-/* Style the top-left corner of the note */
-.note::before {
+/* Integrated curved post-it effect */
+
+    .note {
+        width: 250px;
+        height: 240px;
+        position: relative;
+        overflow: hidden;
+        margin: 30px auto;
+        padding: 20px;
+        box-shadow: inset 3px -4px 20px rgba(0, 0, 0, 0.2), inset 0px -7px 14px rgb(0 0 0 / 0%), 2px 4px 6px 5px rgb(0 0 0 / 0%);
+        line-height: 1.7em;
+        font-size: 19px;
+        color: #130d6b;
+        border-radius: 0 0 0 30px/45px;
+        padding-bottom: 40px;
+    }
+
+
+
+.note:before {
     content: "";
+    display: block;
     position: absolute;
-    top: -10px;
-    left: -10px;
-    border-top: 10px solid transparent;
-    border-right: 10px solid #d4d4d4;
-    width: 0;
+    width: 20px;
+    height: 25px;
+    background: #ffcc66; 
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: skewX(25deg);
 }
 
-/* Style the bottom-right corner of the note */
-.note::after {
+.note:after {
     content: "";
+    display: block;
     position: absolute;
-    bottom: -10px;
-    right: -10px;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #d4d4d4;
-    width: 0;
+    width: 75%;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 0px;
+    left: 10%;
 }
 
 .button-affirmation {
@@ -419,8 +438,8 @@ color: #eeeee8 !important;
 }
 
 .container-unlock {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-weight: 300;
+    color: #4d4d4d;
 }
 
 /*responsiveness for note section*/
@@ -639,4 +658,14 @@ p.mt-5.text-center.are-you-sure {
     100% {
         transform: scale(1.2);
     }
+}
+
+/*override bootstrap carousel arrows*/
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fc6c97' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fc6c97' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
