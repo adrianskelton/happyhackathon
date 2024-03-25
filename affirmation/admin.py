@@ -3,8 +3,12 @@ from .models import Affirmation, Category
 from favorites.models import Favorite
 
 class AffirmationAdmin(admin.ModelAdmin):
-    list_display = ('text', 'category', 'created_at')  # Display the 'text' field in the admin list view
+    list_display = ('text', 'category', 'created_at', 'id')
 
 admin.site.register(Affirmation, AffirmationAdmin)
-admin.site.register(Category) 
 admin.site.register(Favorite)
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'slug', 'icon']
+
+admin.site.register(Category, CategoryAdmin)
