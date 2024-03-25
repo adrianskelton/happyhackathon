@@ -528,9 +528,14 @@ button.btn.back-home {
     margin-top: 30px;
 }
 
-a.nav-link.home-link {
-    color: white;
+a.nav-link.home-link, .nav-link, 
+.navbar-light, .navbar-nav, .nav-link  {
+    color: white !important;
+    display: !important flex;
+    justify-content: !important end;
 }
+
+
 
 /* Enlarge effect for the button on hover */
 .back-home:hover {
