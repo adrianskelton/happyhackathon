@@ -288,13 +288,13 @@ color: #000 ;
     text-align: center;
 }
 
-#rating-Btn, .submit-btn {
+#rating-Btn, .submit-btn, . {
     background-color: #ff5fcc;
     color: #000!important;
     padding: 10px 20px;
 }
 
-#rating-sutmitbtn:hover, .submit-btn:hover, #rating-Btn:hover, .button-affirmation:hover {
+#rating-sutmitbtn:hover, button.btn.back-home:hover, .submit-btn:hover, #rating-Btn:hover, .button-affirmation:hover {
     background-color: #811b61!important;
     color: #fff !important; 
 }
@@ -563,7 +563,7 @@ textarea#id_message {
 }
 
 button.btn.back-home {
-    background-color: #666666;
+    background-color: #f758c5;
     border-radius: 5px;
     margin-top: 30px;
 }
