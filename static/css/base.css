@@ -112,6 +112,7 @@ h5 {
 
 .note {
     width: 100%;
+    max-height: 800px;
     border: 1px solid #d4d4d4;
     background-color: #fff;
     padding: 15px;
@@ -123,7 +124,6 @@ h5 {
 
     .note {
         width: 250px;
-        height: 240px;
         position: relative;
         overflow: hidden;
         margin: 30px auto;
