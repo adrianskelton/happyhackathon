@@ -288,13 +288,13 @@ color: #000 ;
     text-align: center;
 }
 
-#rating-Btn, .submit-btn {
-    background-color: #f8ace0;
+#rating-Btn, .submit-btn, . {
+    background-color: #ff5fcc;
     color: #000!important;
     padding: 10px 20px;
 }
 
-#rating-sutmitbtn:hover, .submit-btn:hover, #rating-Btn:hover, .button-affirmation:hover {
+#rating-sutmitbtn:hover, button.btn.back-home:hover, .submit-btn:hover, #rating-Btn:hover, .button-affirmation:hover {
     background-color: #811b61!important;
     color: #fff !important; 
 }
@@ -333,6 +333,7 @@ color: #000 ;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
+    background: linear-gradient(135deg, #fff095, #f7a9b778, #fea6b685, transparent);
 }
 
 .login-btn {
@@ -356,6 +357,10 @@ color: #000 ;
 }
 
 /* contact us page */
+.contact-container{
+    background: linear-gradient(135deg, #FFF095, #f7a9b778, #fea6b685, transparent);
+}
+
 .contact-container input {
     width: 60%;
 }
@@ -558,7 +563,7 @@ textarea#id_message {
 }
 
 button.btn.back-home {
-    background-color: #666666;
+    background-color: #f758c5;
     border-radius: 5px;
     margin-top: 30px;
 }
