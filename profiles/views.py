@@ -127,9 +127,16 @@ def success(request):
 
 
 # Function that will be called when a 404 error occurs
-def custom_404(request, exception=None):
+def custom_404(request):
     """
     Custom 404 error view.
     """
-    return render(
-        request, '404.html', {'exception': exception}, status=404)
+    return render(request, '404.html', status=404)
+
+
+# Function that will be called when a 500 error occurs
+def custom_500(request):
+    """
+    Custom 500 error view.
+    """
+    return render(request, '500.pug', status=500)
