@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import affirmation, get_random_affirmation
+from .views import affirmation, get_random_affirmation, edit_affirmation, delete_affirmation, create_affirmation
 from favorites.views import add_to_favorites
 
 urlpatterns = [
@@ -11,5 +11,8 @@ urlpatterns = [
     # add to favorites
     path('favorites/<int:affirmation_id>/', add_to_favorites, name='favorite'),
     
-    path('affirmation/<int:pk>/', affirmation, name='affirmation')
+    path('affirmation/<int:pk>/', affirmation, name='affirmation'),
+    path('create/', create_affirmation, name='create_affirmation'),
+    path('affirmation/<int:affirmation_id>/edit/', edit_affirmation, name='edit_affirmation'),
+    path('affirmation/<int:affirmation_id>/delete/', delete_affirmation, name='delete_affirmation'),
 ]

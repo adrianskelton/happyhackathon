@@ -11,7 +11,7 @@ h5 {
 }
 
 .header {
-    background-color: #CCCCCC;
+    background-color: #a09e9e;
     height: 120px;
     width: 100%;
     /* position: fixed; */
@@ -74,7 +74,7 @@ h5 {
 }
 
 .footer {
-    background-color: #CCCCCC;
+    background-color: #a09e9e;
     padding: 20px;
     width: 100%;
     max-height: 200px;
@@ -599,7 +599,7 @@ p.mt-5.text-center.are-you-sure {
 /*-----------------------------messages-----------------------------------------*/
 
 .col-md-8.offset-md-2.msg2.justify-content-center {
-    background-color: #1e7e34;
+    background-color: #f758c5;
     margin-top: 1rem;
     color: white;
     display: flex;
@@ -639,4 +639,12 @@ p.mt-5.text-center.are-you-sure {
     100% {
         transform: scale(1.2);
     }
+}
+
+/*-----------------------------base.html-----------------------------------------*/
+
+ul.navbar-nav.ms-auto.mb-2.mb-lg-0.dropdown-menu-end.ml-auto {
+    position: absolute;
+    right: 0;
+    padding-right: 4%;
 }
