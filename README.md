@@ -15,7 +15,7 @@ Explore the repository [On a +ve Note on github](https://github.com/adrianskelto
 
 ## Table of contents
 
- 1. [ UX ](#ux)
+ 1. [ User Experience (UX) ](#user-experience-ux)
 	- [Site Goal](#site-goal)
 	- [User Stories](#user-stories)
 	- [Design](#design)
@@ -57,20 +57,31 @@ Our platform is designed not only as a source of inspiration but also as a commu
 ### `Design`
 The design of "On a +ve Note" is centered around a calming and positive aesthetic to complement the purpose of the platform. Carefully chosen colors and typography create a welcoming environment for users engaging with affirmations.
 
-- **Colours**: 
-   - **Text**: The text color is chosen for optimal readability against the background, ensuring that users can comfortably read affirmations without strain. Colors like dark `gray (#333)` for regular text and a slightly lighter shade for secondary text ensure accessibility.
-   - **Body Background**: The body background is a soft, light color that provides a soothing backdrop for the affirmations. A gentle gradient or a pastel shade, such as a # `(#)` or a soft lavender # `(#)`, can enhance the feeling of calm and positivity.
+#### Colour Scheme
+The colour palette of "On a +ve Note" has been carefully selected to create a visually appealing and emotionally resonant user experience. Drawing from the CSS, the website features a combination of soft pastels and warm accents that evoke a sense of comfort and positivity.
 
-The color palette is intentionally kept minimalistic and soft, avoiding overly bright or harsh contrasts to maintain a peaceful and positive space that encourages reflection and mindfulness. <br>
-	![Colour Palette]()
+- **Text**: For optimal readability, the main text utilizes a darker shade, `#333`, ensuring that content is easily legible against lighter backgrounds. This choice helps to draw attention to the affirmations and content, making them the focal point of the user experience.
 
-	
-- **Typography**:
-  - Primary font: **Protest Revolution**, imported from Google Fonts, is used for its strong and uplifting qualities, aligning with the empowering nature of the affirmations. It's used for headings and important calls to action to grab the user's attention. <br>
-	![Google Font]()
+- **Body Background**: The body background employs a light and soothing color, `#CCCCCC`, providing a neutral canvas that complements the site's content without overwhelming the user. This soft gray ensures that the colorful notes and buttons stand out, enhancing user engagement.
 
-  - Secondary font: **Sans-Serif**. This font family is chosen for the body text due to its readability and simplicity, ensuring that users can easily engage with the content without distraction. <br>
-  	![Google Font]()
+- **Notes Background**: Affirmation notes feature background colors like `#ffcc66` (a soft orange), `#99ccff` (a serene blue), and `#99ff99` (a refreshing green), each chosen to represent different themes or moods. These colors not only add visual interest but also aid in the categorization of affirmations.
+
+- **Buttons and Interactive Elements**: Interactive elements such as buttons are styled with a pink color, `#e63cb0`, which adds a vibrant pop of color that contrasts nicely with the site's overall pastel theme. The hover state for these elements introduces a deeper shade, `#811b61`, enhancing the interactive experience.
+
+- **Footer and Header**: The header and footer utilize a consistent background color, `#CCCCCC`, maintaining visual coherence across the site. This choice ensures that these navigational elements are both unobtrusive and easily accessible.
+
+This thoughtful application of color not only enhances the aesthetic appeal of "On a +ve Note" but also plays a crucial role in the user's emotional engagement with the platform, fostering an environment that is both uplifting and conducive to positive reflection.
+
+![Colour Palette](static/images/readme/color-palette.PNG)
+
+
+#### Typography
+- Primary font: **Bad Script**, imported from Google Fonts, for a personal, handwritten feel.
+   ![Google Font](static/images/readme/googlefont-badscript.PNG)
+
+- Secondary font: **Happy Monkey**, sans-serif, for clear and readable content headers and navigation.
+   ![Google Font](static/images/readme/googlefont-happymonkey.PNG)
+
 
 ### `Imagery`
 
@@ -183,7 +194,7 @@ Looking ahead, "On a +ve Note" aims to continuously evolve and introduce new fea
 
 - **GitHub**: Hosted the project's repository, providing a platform for code management, issue tracking, and collaboration among developers.
 
-### Development Tools and Libraries
+### `Development Tools and Libraries`
 - **GitPod**: Used as the Integrated Development Environment (IDE), offering a pre-configured workspace with all necessary dependencies for developing, running, and debugging the project.
 
 - **Bootstrap**: Leveraged for its responsive design templates and components, enhancing the user interface with minimal custom CSS.
@@ -194,7 +205,7 @@ Looking ahead, "On a +ve Note" aims to continuously evolve and introduce new fea
 
 - **Whitenoise**: Integrated with Django to serve static files seamlessly in production on Heroku, improving the efficiency of content delivery.
 
-### Additional Technologies
+### `Additional Technologies`
 - **Django Allauth**: Utilized for authentication, registration, and account management, streamlining the process of user sign-ups, logins, and social account integration.
 
 - **Django REST Framework**: Implemented to create a RESTful API for the application, enabling seamless data exchange between the frontend and backend and facilitating future development of mobile applications or third-party integrations.
@@ -242,12 +253,14 @@ To maintain code quality and ensure adherence to web standards, the following va
 Google Lighthouse was utilized to assess the application's performance, accessibility, best practices, and SEO. The tests were conducted on both mobile and desktop versions to optimize user experience and search engine visibility.
 
 **Google Lighthouse Results**:
-- Performance:
-- Accessibility:
-- Best Practices:
-- SEO:
+- Performance
+- Accessibility
+- Best Practices
+- SEO
 
-[Include screenshots of your Google Lighthouse results here]
+| Home Page | Affirmation Page | Contact us Page |
+| ---- | ---- | ---- |
+| ![Lighthouse Assesment](static/images/readme/lighthouse-1.PNG) | ![Lighthouse Assesment](static/images/readme/lighthouse-2.PNG) | ![Lighthouse Assesment](static/images/readme/lighthouse-3.PNG)|
 
 
 ## Bugs
