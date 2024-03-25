@@ -1,6 +1,6 @@
 # On a +ve Note
 
-![Responsive Image]()
+![Responsive Image](static/images/readme/deployed-site.png)
 
 At "On a + Note," users can start their day on a positive note by accessing a curated selection of affirmations designed to promote optimism, resilience, and self-belief. Whether you seek motivation, encouragement, or simply a moment of reflection, our platform delivers affirmations that resonate with various aspects of life – from personal growth to professional success.
 
