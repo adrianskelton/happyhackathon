@@ -3,15 +3,15 @@
 {% block title %}Home - on a + note{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
     <div class="img-container">
         <div class="dark-overlay">
             <div class="container-fluid hero-image"></div>
         </div>
-        <div class="col-12 col-sm-10 col-md-8 col-lg-12 p-3 mb-2 d-flex justify-content-center quote-wrapper">
+        <div class="col-12 p-3 mb-2 ml-5 d-flex justify-content-center quote-wrapper">
             <!-- <img class="quote" src="../static/images/logo.png" alt="On a + Note Logo"> -->
-            <h1 class="col-12 col-sm-10 col-lg-10 quote text-center margin-20">On A <span class="pink">+</span> Note</h2>
-                <p class="line text-center">Welcome to a world of happiness and positivity. Discover daily affirmations
+            <h1 class="col-12 col-sm-10 col-lg-10 quote text-center ml-3">On A <span class="pink">+</span> Note</h2>
+                <p class="line text-center ml-4">Welcome to a world of happiness and positivity. Discover daily affirmations
                     to uplift your spirits and brighten your day.</p>
         </div>
     </div>
@@ -140,5 +140,47 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById('site-header');
+    var scrollThreshold = 340;
+    var isIndexPage = window.location.pathname === '/';
+    var navLinks = document.querySelectorAll('.nav-link');
+
+    if (isIndexPage) {
+        header.classList.add('index-page');
+        navLinks.forEach(function (link) {
+            link.classList.add('index-page');
+        });
+    }
+
+    window.addEventListener('scroll', function () {
+        if (isIndexPage) {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('scrolled');
+                navLinks.forEach(function (link) {
+                    link.classList.remove('index-page');
+                });
+            } else {
+                header.classList.remove('scrolled');
+                navLinks.forEach(function (link) {
+                    link.classList.add('index-page');
+                });
+            }
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const imgContainer = document.querySelector('.img-container');
+    imgContainer.addEventListener('mouseover', function() {
+        imgContainer.classList.add('hover');
+    });
+    imgContainer.addEventListener('mouseout', function() {
+        imgContainer.classList.remove('hover');
+    });
+});
+</script>
 
 {% endblock %}
