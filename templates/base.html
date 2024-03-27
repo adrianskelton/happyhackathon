@@ -28,7 +28,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light header">
+    <nav class="navbar navbar-expand-lg navbar-light header" id="site-header">
         <div class="container-fluid">
             <div id="sun"></div>
             <div id="logo-background">
@@ -82,7 +82,7 @@
     
     </nav>
 
-    <div class="container">
+    <div class="container position-fixed">
         <div class="row">
             <div class="col-md-8 offset-md-2 msg2 justify-content-center">
                 <!-- Display messages -->
@@ -95,10 +95,8 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-3">
         {% block content %}
         {% endblock %}
-    </div>
     
     <!-- Footer -->
     <div class="container-fluid footer">

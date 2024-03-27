@@ -11,13 +11,26 @@ h5 {
 }
 
 .header {
+    height: 100px;
     background: linear-gradient(135deg, #f8f85f, #f98b9e, #ffdee4);
-    height: 120px;
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+#site-header.index-page {
+    transition: background-color 0.3s ease-in-out;
+    background: transparent;
+}
+
+#site-header.scrolled {
+    background: linear-gradient(135deg, #f8f85f, #f98b9e, #ffdee4);
+}
+
+#index-page .header {
+    background: transparent;
 }
 
 #sun{
@@ -185,28 +198,14 @@ color: #000 ;
 
 .hero-image {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: #000;
     background: url('https://imgur.com/tEZ1lVB.png') no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
-    animation: opacity 15s infinite ease-in-out;
-}
-
-@keyframes opacity {
-    0% {
-        opacity: 0.5;
-    }
-
-    40% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.5;
-    }
+    transition: opacity 7s ease; /* Add transition property */
 }
 
 .dark-overlay {
@@ -220,16 +219,33 @@ color: #000 ;
 .quote-wrapper {
     max-width: 90%;
     margin: 0 0 0 0;
-    animation: opacity-out 15s infinite ease-in-out;
+    opacity: 1;
+    transition: opacity 7s ease; /* Add transition property */
 }
 
-/* For the text on landing page to be spaced" */
-
-.margin-20 {
-    margin-top: 20px;
+.img-container:hover .hero-image {
+    opacity: 1;
 }
 
-@keyframes opacity-out {
+.img-container:hover .quote-wrapper {
+    opacity: 0;
+}
+
+@keyframes opacity-hero {
+    0% {
+        opacity: 0.5;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes opacity-quote {
     0% {
         opacity: 1;
     }
@@ -241,6 +257,12 @@ color: #000 ;
     100% {
         opacity: 1;
     }
+}
+
+/* For the text on landing page to be spaced" */
+
+.margin-20 {
+    margin-top: 20px;
 }
 
 .quote,
@@ -288,7 +310,7 @@ color: #000 ;
     text-align: center;
 }
 
-#rating-Btn, .submit-btn, . {
+#rating-Btn, .submit-btn {
     background-color: #ff5fcc;
     color: #000!important;
     padding: 10px 20px;
@@ -573,6 +595,10 @@ a.nav-link.home-link, .nav-link,
     color: white;
     /*display: !important flex;
     justify-content: !important end;*/
+}
+
+.navbar-nav .nav-link.index-page {
+    color: #FFF;
 }
 
 li.nav-item{
