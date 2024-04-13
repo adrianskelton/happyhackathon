@@ -13,11 +13,6 @@ class Favorite(models.Model):
 
     class Meta:
         unique_together = ('user', 'affirmation')
-    
-    def clean(self):
-        # Example validation: Ensure the user cannot favorite their own affirmation
-        if self.user == self.affirmation.author:
-            raise ValidationError("You cannot favorite your own affirmation.")
 
     def __str__(self):
         return f"{self.user.username}'s Favorite: {self.affirmation.text}"

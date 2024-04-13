@@ -1,9 +1,10 @@
 import random
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import Category, Affirmation
+from .models import Category, Affirmation, AffirmationUser
+from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
-from .forms import AffirmationForm
+from .forms import AffirmationForm, UserAffirmationForm
 import random
 from django.contrib import messages
 
@@ -91,3 +92,41 @@ def delete_affirmation(request, affirmation_id):
         affirmation.delete()
         return redirect('home')  # Redirect to home page after deletion
     return render(request, 'delete_affirmation.html', {'affirmation': affirmation})
+
+
+@login_required
+def user_affirmation(request):
+    if request.method == 'POST':
+        form = UserAffirmationForm(request.POST)
+        if form.is_valid():
+            affirmation = form.save(commit=False)
+            affirmation.user = request.user  # Associate the affirmation with the logged-in user
+            affirmation.save()
+            messages.success(request, 'You have successfully created your affirmation!')
+            return redirect('home')  # Redirect to the user's profile page
+    else:
+        form = UserAffirmationForm()
+    
+    user_affirmations = AffirmationUser.objects.filter(user=request.user)   # Fetch affirmations created by the user
+    
+    return render(request, 'user_affirmation.html', {'form': form, 'user_affirmations': user_affirmations})
+
+@login_required
+def edit_user_affirmation(request, user_affirmation_id):
+    user_affirmation = get_object_or_404(AffirmationUser, id=user_affirmation_id)
+    if request.method == 'POST':
+        form = UserAffirmationForm(request.POST, instance=user_affirmation)
+        if form.is_valid():
+            form.save()
+            return redirect('user_affirmation_detail', user_affirmation_id=user_affirmation_id)
+    else:
+        form = UserAffirmationForm(instance=user_affirmation)
+    return render(request, 'edit_user_affirmation.html', {'form': form, 'user_affirmation_id': user_affirmation_id})
+
+@login_required
+def delete_user_affirmation(request, user_affirmation_id):
+    user_affirmation = get_object_or_404(AffirmationUser, id=user_affirmation_id)
+    if request.method == 'POST':
+        user_affirmation.delete()
+        return redirect('home')  # Redirect to home page after deletion
+    return render(request, 'delete_user_affirmation.html', {'user_affirmation': user_affirmation})

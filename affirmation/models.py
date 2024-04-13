@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 # Model representing a category for blog posts
@@ -18,6 +19,15 @@ class Affirmation(models.Model):
     text = models.CharField(max_length=800)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='affirmations', default=None)
+
+    def __str__(self):
+        return self.text
+
+class AffirmationUser(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.CharField(max_length=800)
+    created_at = models.DateTimeField(auto_now_add=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='affirmation_user', default=None)
 
     def __str__(self):
         return self.text

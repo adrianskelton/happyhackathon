@@ -6,19 +6,18 @@ from django.views.generic import DetailView, CreateView, UpdateView
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from .models import Profile
+from affirmation.models import AffirmationUser
 from .forms import ProfileForm, ContactForm
 from django.contrib import messages
 
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import DetailView, CreateView, UpdateView
-from django.dispatch import receiver
-from django.db.models.signals import post_save
-from .models import Profile
-from .forms import ProfileForm, ContactForm
-from django.contrib import messages
+def profile(request, username):
+    user = User.objects.get(username=username)
+    user_affirmations = Affirmation.objects.filter(user=user)
+    context = {
+        'user': user,
+        'user_affirmations': user_affirmations,
+    }
+    return render(request, 'profile.html', context)
 
 def view_profile(request):
     owner = request.user
@@ -30,7 +29,10 @@ def view_profile(request):
             return redirect('view_profile')
     else:
         form = ProfileForm(instance=profile)
-    return render(request, 'profile.html', {'form': form})
+    
+    user_affirmations = AffirmationUser.objects.filter(user=owner)  # Fetch affirmations created by the user
+    
+    return render(request, 'profile.html', {'form': form, 'user_affirmations': user_affirmations})
 
 class ProfileDetailView(LoginRequiredMixin, DetailView):
     model = Profile

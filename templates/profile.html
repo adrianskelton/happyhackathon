@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home - on a + note{% endblock %}
+{% block title %}Profile - on a + note{% endblock %}
 
 {% block content %}
-
+<br><br><br><br><br><br><br>
+<h1>{{ user.username }}'s</h1>
+{{ user_affirmation }}
+{% if user_affirmations %}
+    <h2>Affirmations:</h2>
+    <ul>
+    {% for affirmation in user_affirmations %}
+        <li>{{ affirmation.text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No affirmations found.</p>
+{% endif %}
 {% endblock %}
