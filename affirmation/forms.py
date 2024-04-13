@@ -1,11 +1,21 @@
 from django import forms
-from .models import Affirmation
+from .models import Affirmation, AffirmationUser
 
 class AffirmationForm(forms.ModelForm):
     class Meta:
         model = Affirmation
-        fields = ['text', 'category']  # Define fields you want to include in the form
+        fields = ['text', 'category']
         labels = {
-            'text': 'Affirmation Text',  # Customize field labels if needed
-            'category': 'Category',  # Customize field labels if needed
+            'text': 'Affirmation Text',
+            'category': 'Category',
+        }
+
+
+class UserAffirmationForm(forms.ModelForm):
+    class Meta:
+        model = AffirmationUser
+        fields = ['text', 'category']
+        labels = {
+            'text': 'Affirmation Text',
+            'category': 'Category',
         }

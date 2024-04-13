@@ -25,6 +25,9 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.owner}'s profile"
+    
+    def get_absolute_url(self):
+        return reverse('profile', kwargs={'username': self.owner.username})
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):

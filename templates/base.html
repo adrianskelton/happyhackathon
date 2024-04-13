@@ -52,7 +52,7 @@
                         <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a>
                     </li>
                 
-                    <!-- {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,9 +60,9 @@
                             {{ user.username }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Favorites</a></li>
-                            <li><a class="dropdown-item" href="{% url 'create_affirmation' %}">Create</a></li>
+                            <li><a class="dropdown-item" href="{% url 'profile' username=request.user.username %}">Profile</a></li>
+                            <li><a class="dropdown-item" href="">Favorites</a></li>
+                            <li><a class="dropdown-item" href="{% url 'user_affirmation' %}">Create</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item logout-nav" href="{% url 'logout' %}">Logout</a></li>
                         </ul>
@@ -74,7 +74,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'register' %}">Register</a>
                     </li>
-                    {% endif %} -->
+                    {% endif %}
                 </ul>
             </div>
         </div>
