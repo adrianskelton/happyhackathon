@@ -75,7 +75,9 @@
                 </div>
                 {% if affirmation %}
                     <p class="text-center d-flex justify-content-start mb-5">Category: {{ affirmation.category }}</p>
-                    <!-- <a href="{% url 'favorite' affirmation.id %}"><i class="far fa-heart"></i> Add to Favorites</a> -->
+                    <a href="{% url 'favorites' affirmation.category.slug affirmation.id %}">
+                        <i class="far fa-heart"></i> Add to Favorites
+                    </a>
                     <h2 class="text-center affirmation p-3">{{ affirmation.text }}</h2>
                 {% else %}
                     <h2 class="text-center mb-5 mt-5">Welcome!</h2>
