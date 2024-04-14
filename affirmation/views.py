@@ -1,5 +1,5 @@
 import random
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponse
 from .models import Category, Affirmation, AffirmationUser
 from django.contrib.auth.decorators import login_required
@@ -103,13 +103,18 @@ def user_affirmation(request):
             affirmation.user = request.user  # Associate the affirmation with the logged-in user
             affirmation.save()
             messages.success(request, 'You have successfully created your affirmation!')
-            return redirect('home')  # Redirect to the user's profile page
+            return redirect(reverse('profile', kwargs={'username': request.user.username}))
     else:
         form = UserAffirmationForm()
     
     user_affirmations = AffirmationUser.objects.filter(user=request.user)   # Fetch affirmations created by the user
     
     return render(request, 'user_affirmation.html', {'form': form, 'user_affirmations': user_affirmations})
+
+@login_required
+def show_user_affirmations(request):
+    user_affirmations = AffirmationUser.objects.filter(user=request.user)
+    return render(request, 'profile.html', {'user_affirmations': user_affirmations})
 
 @login_required
 def edit_user_affirmation(request, user_affirmation_id):

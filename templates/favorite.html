@@ -1,25 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Profile - on a + note{% endblock %}
+{% block title %}Favorites - on a + note{% endblock %}
 
 {% block content %}
 <br><br><br><br><br><br><br>
 <div class="container-fluid text-center">
-    <h1>{{ user.username }}'s Profile</h1>
+    <h1>{{ user.username }}'s Favorite Affirmations</h1>
 </div>
 <div class="container-fluid">
-    {% if user_affirmations %}
+    {% if favorites %}
     <div class="row col-12 d-flex justify-content-center">
-        {% for affirmation_user in user_affirmations %}
+        {% for favorite in favorites %}
             <div class="col-3 border p-4 m-1">
                 <div>
                     <div class="mb-5">
-                        {% if affirmation_user.category %}
-                        {{ affirmation_user.category.title }}
+                        {% if favorite.category %}
+                        {{ favorite.category.title }}
                         {% endif %}
                     </div>
                     <div>
-                        {{ affirmation_user.text }} 
+                        {{ favorite.affirmation.text }} 
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex justify-content-end align-bottom mt-4">
+                        <a href="{% url 'remove_favorite' favorite.id %}">Remove from Favorites</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +32,7 @@
     </div>
     {% else %}
     <div class="row col-12 d-flex justify-content-center">
-            <p class="col-3 p-4">No affirmations yet</p>
+            <p class="col-3 p-4">No Favorites yet</p>
     </div>
     {% endif %}
 </div>

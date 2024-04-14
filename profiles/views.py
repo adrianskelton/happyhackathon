@@ -12,9 +12,11 @@ from django.contrib import messages
 
 def profile(request, username):
     user = User.objects.get(username=username)
-    user_affirmations = Affirmation.objects.filter(user=user)
+    profile = Profile.objects.get(owner=user)
+    user_affirmations = profile.user_affirmations.all()
     context = {
         'user': user,
+        'profile': profile,
         'user_affirmations': user_affirmations,
     }
     return render(request, 'profile.html', context)
@@ -30,8 +32,7 @@ def view_profile(request):
     else:
         form = ProfileForm(instance=profile)
     
-    user_affirmations = AffirmationUser.objects.filter(user=owner)  # Fetch affirmations created by the user
-    
+    user_affirmations = AffirmationUser.objects.filter(user=request.user)  # Fetch affirmations created by the user
     return render(request, 'profile.html', {'form': form, 'user_affirmations': user_affirmations})
 
 class ProfileDetailView(LoginRequiredMixin, DetailView):

@@ -25,9 +25,9 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('register/', register_view, name='register'),
 
-    path('profile/', view_profile, name='view_profile'),
+    path('profiles/', include('profiles.urls')),
     path('affirmation/', include('affirmation.urls')),
-    path('profiles/', include('profiles.urls'))
+    path('favorites/', include('favorites.urls'))
 ]
 
 # Define the custom 404 error handler function

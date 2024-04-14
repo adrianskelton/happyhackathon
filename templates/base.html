@@ -61,7 +61,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'profile' username=request.user.username %}">Profile</a></li>
-                            <li><a class="dropdown-item" href="">Favorites</a></li>
+                            <li><a class="dropdown-item" href="{% url 'favorites_page' %}">Favorites</a></li>
                             <li><a class="dropdown-item" href="{% url 'user_affirmation' %}">Create</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item logout-nav" href="{% url 'logout' %}">Logout</a></li>
