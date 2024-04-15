@@ -13,11 +13,21 @@ from django.contrib import messages
 def profile(request, username):
     user = User.objects.get(username=username)
     profile = Profile.objects.get(owner=user)
-    user_affirmations = profile.user_affirmations.all()
+    user_affirmations = AffirmationUser.objects.filter(user=user)
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('view_profile')
+    else:
+        form = ProfileForm(instance=profile)
+    
     context = {
         'user': user,
         'profile': profile,
         'user_affirmations': user_affirmations,
+        'form': form
     }
     return render(request, 'profile.html', context)
 

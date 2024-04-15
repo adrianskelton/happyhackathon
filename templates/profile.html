@@ -11,23 +11,52 @@
     {% if user_affirmations %}
     <div class="row col-12 d-flex justify-content-center">
         {% for affirmation_user in user_affirmations %}
-            <div class="col-3 border p-4 m-1">
-                <div>
-                    <div class="mb-5">
-                        {% if affirmation_user.category %}
-                        {{ affirmation_user.category.title }}
+        {% if affirmation_user.user == request.user %}
+        <div class="col-3 border p-4 m-1">
+            <div>
+                <div class="mb-5">
+                    {% if affirmation_user.category %}
+                    <div>
+                        {% if user.is_authenticated and user.is_staff %}
+                        <div class="dropdown d-flex justify-content-end">
+                            <button class="border-0 bg-transparent" id="settingsBlog" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu settings-dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="{% url 'edit_user_affirmation' affirmation_user.id %}">
+                                        <div class="dropdown-item">Edit Affirmation</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="{% url 'delete_user_affirmation' affirmation_user.id %}">
+                                        <div class="dropdown-item">Delete Affirmation</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                         {% endif %}
+
                     </div>
                     <div>
-                        {{ affirmation_user.text }} 
+                        {{ affirmation_user.category.title }}
                     </div>
+                    {% endif %}
+                </div>
+                <div>
+                    {{ affirmation_user.text }}
                 </div>
             </div>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
     {% else %}
     <div class="row col-12 d-flex justify-content-center">
-            <p class="col-3 p-4">No affirmations yet</p>
+        <p class="col-3 p-4">No affirmations yet</p>
     </div>
     {% endif %}
 </div>
