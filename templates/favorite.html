@@ -9,22 +9,22 @@
 </div>
 <div class="container-fluid">
     {% if favorites %}
-    <div class="row col-12 d-flex justify-content-center">
+    <div class="row col-12 d-flex justify-content-center my-5">
         {% for favorite in favorites %}
-            <div class="col-3 border p-4 m-1">
-                <div>
+            <div class="col-3 border p-4 m-1 note note4">
+                <div class="mb-5">
                     <div class="mb-5">
                         {% if favorite.category %}
                         {{ favorite.category.title }}
                         {% endif %}
                     </div>
-                    <div>
+                    <div class="mb-5">
                         {{ favorite.affirmation.text }} 
                     </div>
                 </div>
-                <div>
+                <div class="save mt-5">
                     <div class="d-flex justify-content-end align-bottom mt-4">
-                        <a href="{% url 'remove_favorite' favorite.id %}">Remove from Favorites</a>
+                        <a href="{% url 'remove_favorite' favorite.id %}" title="Remove from favorites"><i class="fas fa-heart"></i></a>
                     </div>
                 </div>
             </div>

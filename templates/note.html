@@ -75,10 +75,11 @@
                 </div>
                 {% if affirmation %}
                     <p class="text-center d-flex justify-content-start mb-5">Category: {{ affirmation.category }}</p>
-                    <a href="{% url 'favorites' affirmation.category.slug affirmation.id %}">
-                        <i class="far fa-heart"></i> Add to Favorites
-                    </a>
                     <h2 class="text-center affirmation p-3">{{ affirmation.text }}</h2>
+                    <div>
+                        <a class="save d-flex justify-content-end align-bottom" href="{% url 'favorites' affirmation.category.slug affirmation.id %}"> Add to Favorites <i class="far fa-heart ml-3"></i>
+                        </a>
+                    </div>
                 {% else %}
                     <h2 class="text-center mb-5 mt-5">Welcome!</h2>
                     <h3 class="text-center affirmation">Pick a category and let's sprinkle some positivity with a side of humor. Remember, life doesn't always go according to plan.. but that's where the best stories begin! </h3>
