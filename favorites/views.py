@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.db.models import Prefetch
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Favorite
@@ -23,6 +24,18 @@ def remove_from_favorites(request, favorite_id):
     messages.success(request, 'Favorite removed successfully.')
     return redirect('favorites_page')
 
+@login_required
 def favorite(request):
-    favorites = Favorite.objects.filter(user=request.user)
-    return render(request, 'favorite.html', {'favorites': favorites})
+    # Get all favorite objects and prefetch related categories and affirmations
+    favorites = Favorite.objects.filter(user=request.user).select_related('affirmation').prefetch_related('category')
+    
+    # Group favorites by category
+    categories = {}
+    for favorite in favorites:
+        category = favorite.category
+        if category not in categories:
+            categories[category] = [favorite]
+        else:
+            categories[category].append(favorite)
+    
+    return render(request, 'favorite.html', {'categories': categories})
