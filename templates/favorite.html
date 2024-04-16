@@ -8,31 +8,29 @@
     <h1>{{ user.username }}'s Favorite Affirmations</h1>
 </div>
 <div class="container-fluid">
-    {% if favorites %}
+    {% if categories %}
+    {% for category, favorites in categories.items %}
+    <div class="row col-12 d-flex justify-content-end my-5">
+        <h2 class="col-11">{{ category.title }}</h2>
+    </div>
     <div class="row col-12 d-flex justify-content-center my-5">
         {% for favorite in favorites %}
-            <div class="col-3 border p-4 m-1 note note4">
-                <div class="mb-5">
-                    <div class="mb-5">
-                        {% if favorite.category %}
-                        {{ favorite.category.title }}
-                        {% endif %}
-                    </div>
-                    <div class="mb-5">
-                        {{ favorite.affirmation.text }} 
-                    </div>
-                </div>
-                <div class="save mt-5">
-                    <div class="d-flex justify-content-end align-bottom mt-4">
-                        <a href="{% url 'remove_favorite' favorite.id %}" title="Remove from favorites"><i class="fas fa-heart"></i></a>
-                    </div>
+        <div class="col-3 border p-4 m-1 note note4">
+            <div class="mb-5">
+                {{ favorite.affirmation.text }} 
+            </div>
+            <div class="save mt-5">
+                <div class="d-flex justify-content-end align-bottom mt-4">
+                    <a href="{% url 'remove_favorite' favorite.id %}" title="Remove from favorites"><i class="fas fa-heart"></i></a>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
+    {% endfor %}
     {% else %}
     <div class="row col-12 d-flex justify-content-center">
-            <p class="col-3 p-4">No Favorites yet</p>
+        <p class="col-3 p-4">No Favorites yet</p>
     </div>
     {% endif %}
 </div>
