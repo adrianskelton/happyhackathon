@@ -1,4 +1,7 @@
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Bad Script', cursive;
 }
 
@@ -44,9 +47,22 @@ h5 {
     box-shadow: 0px 0px 20px 9px #fff;
 }
 
+.devider {
+    width: 100%;
+    height: 100px;
+}
+
+.container-fluid {
+    position: relative;
+}
+
 /* margin in the navbar next to note */
 .note-link {
     margin-right: 20px;
+}
+
+.footer {
+    margin-top: auto
 }
 
 .footer img {
@@ -373,7 +389,8 @@ color: #000 ;
 /* Login/ logout page */
 
 .login-container {
-    margin: 15em auto;
+    margin: auto auto;
+    margin-top: 15em;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
@@ -705,12 +722,20 @@ p.mt-5.text-center.are-you-sure {
 
 /*-----------------------------messages-----------------------------------------*/
 
-.col-md-8.offset-md-2.msg2.justify-content-center {
-    background-color: #f758c5;
-    margin-top: 1rem;
-    color: white;
-    display: flex;
-    font-size: large;
+.alert-container {
+    width: 60%;
+    position: absolute;
+    margin: 8% auto;
+    z-index: 900;
+}
+
+.alert {
+    background-color: #FFB6C1;
+    color: #000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .navbar-collapse {
@@ -748,20 +773,8 @@ p.mt-5.text-center.are-you-sure {
     }
 }
 
-
-
 ul.navbar-nav.ms-auto.mb-2.mb-lg-0.dropdown-menu-end.ml-auto {
     position: absolute;
     right: 0;
     padding-right: 4%;
-
-/*override bootstrap carousel arrows*/
-
-.carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fc6c97' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fc6c97' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-
 }
